@@ -1,0 +1,35 @@
+header.masthead {
+    background:linear-gradient(to bottom,rgba(92,77,66,.4) 0,rgba(92,77,66,.4) 100%),url(../img/bg-masthead.jpg);
+}
+
+
+#mainNav .navbar-brand {
+    font-family: Georgia, serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: #212529;
+}
+
+@media (min-width: 992px)
+{#mainNav {
+    box-shadow: none;
+    background-color: transparent;
+    /* background: #f0edeb; */
+}}
+
+@media (min-width: 992px){
+    #mainNav .navbar-brand {
+    color: #a86632;
+}}
+
+
+#mainNav .navbar-nav .nav-item .nav-link {
+    color: rgba(0,0,0,.5);
+    padding: 0 1rem;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+    font-family: Merriweather,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-weight: 300;
+    font-size: 22px;
+}
