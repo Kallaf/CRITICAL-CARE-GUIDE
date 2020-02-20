@@ -7,5 +7,154 @@
         </ol>
     </nav>
 
-    <h1  style = "margin:3%;">Todo delirium</h1>
+    <div class="container-fluid" id="grad1">
+        <div class="row justify-content-center mt-0">
+            <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
+                <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                    <h2><strong>Cam icu work sheet </strong></h2>
+                    <p>Fill all form field to go to next step</p>
+                    <div class="row">
+                        <div class="col-md-12 mx-0">
+                            <form id="msform">
+                                <!-- progressbar -->
+                                <ul id="progressbar">
+                                    <li class="active" id="account"><strong>Acute Onset or Fluctuating Course</strong></li>
+                                    <li id="personal"><strong>Inattention</strong></li>
+                                    <li id="payment"><strong>Altered Level of Consciousness</strong></li>
+                                    <li id="confirm"><strong>Disorganized Thinking</strong></li>
+                                </ul> <!-- fieldsets -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">Acute Onset or Fluctuating Course</h2>
+                                        <label class="question">1) Is the pt different than his/her baseline mental status?</label>
+                                        <br>
+                                        <!-- Default inline 1-->
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
+                                        <label class="custom-control-label" for="defaultInline1">yes</label>
+                                        </div>
+
+                                        <!-- Default inline 2-->
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
+                                        <label class="custom-control-label" for="defaultInline2">no</label>
+                                        </div>
+
+                                        <label class="question">2)Has the patient had any fluctuation in mental status in the past 24 hours as evidenced by fluctuation on a sedation scale <a href="#" target="_blank">RASS</a>, <a href="#" target="_blank">GCS</a>, or previous delirium assessment ? </label>
+                                        <!-- Default inline 1-->
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
+                                        <label class="custom-control-label" for="defaultInline3">yes</label>
+                                        </div>
+
+                                        <!-- Default inline 2-->
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="defaultInline4" name="inlineDefaultRadiosExample">
+                                        <label class="custom-control-label" for="defaultInline4">no</label>
+                                        </div>
+
+                                    </div> <input type="button" name="next" class="next action-button" value="Next Step" />
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">Inattention</h2>
+                                        <div class = "instruction">
+                                            <div class = "instruction-section">
+                                                    <h5>Directions</h5>
+                                                    <div class = "instruction-inner-section" >
+                                                        <ul>
+                                                            <li>Say to the patient, “I am going to read you a series of 10 letters. Whenever you hear the letter ‘A,’ indicate by squeezing my hand.”</li>
+                                                            <li>
+                                                                Read letters from the following letter list in a normal tone 3 seconds apart.
+                                                                <br>
+                                                                <div style="text-align: center;">
+                                                                   <p><b>"SAVEAHAART"</b></p>    
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                </div>
+                                                <br>
+                                                    <p class="how-to-count">
+                                                        Errors are counted when patient fails to squeeze on the letter “A” and when the patient squeezes on any letter other than “A.”
+                                                    </p>
+                                            </div>  
+                                        </div>
+                                        <label for="nooferrors">Number of errors</label>
+                                        <input type="text" name="nooferrors" placeholder="Enter number of errors" />
+                                    </div>
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                    <input type="button" name="next" class="next action-button" value="Next Step" />
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">Altered Level of Consciousness</h2>
+                                        <label for="actual-rass-score">Actual <a href="/" target="_blank">RASS</a> score</label>
+                                        <input type="text" name="actual-rass-score" placeholder="Enter actual rass score" />
+                                    </div> 
+                                    <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                    <input type="button" name="next" class="next action-button" value="Next Step" />
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">Disorganized Thinking</h2>
+                                        <div class = "instruction">
+                                                    <div class = "instruction-section">
+                                                        <h5>First ask pt (Yes/No Questions)</h5>
+                                                        <div class = "instruction-inner-section">
+                                                            <ol>
+                                                                <li>Will a stone float on water?</li>
+                                                                <li>Are there fish in the sea?</li>
+                                                                <li>Does one pound weigh more than two pounds?</li>
+                                                                <li>Can you use a hammer to pound a nail?</li>
+                                                            </ol>
+                                                        </div>
+                                                            
+                                                        <p class="how-to-count">
+                                                            Errors are counted when the patient incorrectly answers a question.
+                                                        </p>
+                                                    </div>
+
+                                                
+                                                    <div class = "instruction-section">
+                                                         <h5>Second Directions</h5>
+                                                         <div class = "instruction-inner-section" >
+                                                                <ul>
+                                                                    <li>Say to patient: “Hold up this many fingers” (Hold 2 fingers in front of patient)</li>
+                                                                    <li>“Now do the same thing with the other hand” (Do not repeat number of fingers)</li>
+                                                                    <li>If pt is unable to move both arms, for 2nd part of command ask patient to “Add one more finger”</li>
+                                                                </ul>
+                                                        </div>
+                                                        <br>
+                                                         <p class="how-to-count">
+                                                            An error is counted if patient is unable to complete the entire command.
+                                                         </p>
+                                                    </div>
+                                                    
+                                        </div>
+                                        <label for="nooferrors">Number of errors</label>
+                                        <input type="text" name="nooferrors" placeholder="Enter number of errors" />
+                                    
+                                    </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="make_payment" class="next action-button" value="Confirm" />
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title text-center">Good !</h2> <br><br>
+                                        <div class="row justify-content-center">
+                                            <div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image"> </div>
+                                        </div> <br><br>
+                                        <div class="row justify-content-center">
+                                            <div class="col-7 text-center">
+                                                <h5>CAM ICU negative and  No delrium</h5>
+                                            </div>
+                                        </div>
+                                    </div><input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

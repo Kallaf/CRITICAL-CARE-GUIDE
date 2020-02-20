@@ -1,5 +1,13 @@
+body {
+    background:url(../img/bg-masthead.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 header.masthead {
-    background:linear-gradient(to bottom,rgba(92,77,66,.4) 0,rgba(92,77,66,.4) 100%),url(../img/bg-masthead.jpg);
+    background:none;
 }
 
 
@@ -32,4 +40,23 @@ header.masthead {
     font-family: Merriweather,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     font-weight: 300;
     font-size: 22px;
+}
+
+.instruction{
+    background-color: blanchedalmond;
+    padding:3%;
+    margin-bottom:3%;
+}
+
+.instruction-section{
+    margin-bottom:1%;
+}
+
+.instruction-inner-section{
+    margin-left:6%;
+    margin-top:2%;
+}
+
+.how-to-count{
+    color: brown;
 }
