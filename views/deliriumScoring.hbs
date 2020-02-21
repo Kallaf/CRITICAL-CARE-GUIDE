@@ -11,7 +11,7 @@
         <div class="row justify-content-center mt-0">
             <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
                 <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
-                    <h2><strong>Cam icu work sheet </strong></h2>
+                    <h2><strong>Cam ICU work sheet </strong></h2>
                     <p>Fill all form field to go to next step</p>
                     <div class="row">
                         <div class="col-md-12 mx-0">
@@ -29,25 +29,25 @@
                                         <label class="question">1) Is the pt different than his/her baseline mental status?</label>
                                         <br>
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" class="custom-control-input" id="delirium1yes" name="baseline-mental-status">
+                                            <input type="radio" class="custom-control-input" id="delirium1yes" name="delirium-question1_1" value="yes">
                                             <label class="custom-control-label" for="delirium1yes">yes</label>
                                         </div>
 
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" class="custom-control-input" id="delirium1no" name="baseline-mental-status">
+                                            <input type="radio" class="custom-control-input" id="delirium1no" name="delirium-question1_1" value="no">
                                             <label class="custom-control-label" for="delirium1no">no</label>
                                         </div>
 
-                                        <label class="question">2)Has the patient had any fluctuation in mental status in the past 24 hours as evidenced by fluctuation on a sedation scale <a href="#" target="_blank">RASS</a>, <a href="#" target="_blank">GCS</a>, or previous delirium assessment ? </label>
+                                        <label class="question">2)Has the patient had any fluctuation in mental status in the past 24 hours as evidenced by fluctuation on a sedation scale <a  data-target="#modalRASS" data-toggle="modal" href="#">RASS</a>, <a  data-target="#modalGCS" data-toggle="modal" href="#">GCS</a>, or previous delirium assessment ? </label>
                                         <!-- Default inline 1-->
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" class="custom-control-input" id="delirium2yes" name="fluctuation-in-mental-status">
+                                            <input type="radio" class="custom-control-input" id="delirium2yes" name="delirium-question1_2" value="yes">
                                             <label class="custom-control-label" for="delirium2yes">yes</label>
                                         </div>
 
                                         <!-- Default inline 2-->
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" class="custom-control-input" id="delirium2no" name="fluctuation-in-mental-status">
+                                            <input type="radio" class="custom-control-input" id="delirium2no" name="delirium-question1_2" value="no">
                                             <label class="custom-control-label" for="delirium2no">no</label>
                                         </div>
 
@@ -77,8 +77,9 @@
                                                     </p>
                                             </div>  
                                         </div>
-                                        <label for="nooferrors">Number of errors</label>
-                                        <input type="text" name="nooferrors" placeholder="Enter number of errors" />
+                                        <label for="delirium-no-of-errors1">Number of errors(between 0 and 10)</label>
+                                        <input type="range" name="delirium-no-of-errors1" id="delirium-no-of-errors1" min="0" max="10">
+                                        <div id="delirium-no-of-errors1-result"><b></b> errors</div>
                                     </div>
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Next Step" />
@@ -86,8 +87,10 @@
                                 <fieldset>
                                     <div class="form-card">
                                         <h2 class="fs-title">Altered Level of Consciousness</h2>
-                                        <label for="actual-rass-score">Actual <a href="/" target="_blank">RASS</a> score</label>
-                                        <input type="text" name="actual-rass-score" placeholder="Enter actual rass score" />
+                                        <label for="actual-rass-score">Actual <a  data-target="#modalRASS" data-toggle="modal" href="#">RASS</a> score(between 0 and 10)</label>
+                                        <input type="range" name="actual-rass-score" id="actual-rass-score" min="-5" max="4">
+                                        <div id="actual-rass-score-result">Score:  <b></b></div>
+                                    
                                     </div> 
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                     <input type="button" name="next" class="next action-button" value="Next Step" />
@@ -129,22 +132,14 @@
                                                     </div>
                                                     
                                         </div>
-                                        <label for="nooferrors">Number of errors</label>
-                                        <input type="text" name="nooferrors" placeholder="Enter number of errors" />
-                                    
-                                    </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="make_payment" class="next action-button" value="Confirm" />
+                                        <label for="delirium-no-of-errors2">Number of errors</label>
+                                        <input type="range" name="delirium-no-of-errors2" id="delirium-no-of-errors2" min="0" max="7">
+                                        <div id="delirium-no-of-errors2-result"><b></b> errors</div>
+                                    </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="next" class="next deliriumFinish action-button" value="Finish" />
                                 </fieldset>
                                 <fieldset>
                                     <div class="form-card">
-                                        <h2 class="fs-title text-center">Good !</h2> <br><br>
-                                        <div class="row justify-content-center">
-                                            <div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image"> </div>
-                                        </div> <br><br>
-                                        <div class="row justify-content-center">
-                                            <div class="col-7 text-center">
-                                                <h5>CAM ICU negative and  No delrium</h5>
-                                            </div>
-                                        </div>
+                                        <div id="delirium-result"></div>
                                     </div><input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                 </fieldset>
                             </form>
@@ -154,5 +149,35 @@
             </div>
         </div>
     </div>
+
+{{!-- ----------------------------------------------------------- --}}
+
+
+
+<div aria-hidden="true" aria-labelledby="RASSLabel" class="modal fade" id="modalRASS" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-body mb-0 p-0">
+				<img src="/img/RASS.jpg" alt="" style="width:100%">
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div aria-hidden="true" aria-labelledby="GCSLabel" class="modal fade" id="modalGCS" role="dialog" tabindex="-1">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-body mb-0 p-0">
+				<img src="/img/GCS.jpg" alt="" style="width:100%">
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal" type="button">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
 
 </div>

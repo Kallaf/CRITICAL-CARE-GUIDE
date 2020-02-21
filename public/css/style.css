@@ -15,20 +15,15 @@ header.masthead {
     font-family: Georgia, serif;
     font-weight: 500;
     font-size: 30px;
-    color: #212529;
+    color: #a86632;
 }
 
 @media (min-width: 992px)
 {#mainNav {
     box-shadow: none;
     background-color: transparent;
-    /* background: #f0edeb; */
 }}
 
-@media (min-width: 992px){
-    #mainNav .navbar-brand {
-    color: #a86632;
-}}
 
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -59,4 +54,26 @@ header.masthead {
 
 .how-to-count{
     color: brown;
+}
+
+
+.modal,body.modal-open {
+    padding-right: 0!important
+}
+
+body.modal-open {
+    overflow: auto
+}
+
+body.scrollable {
+    overflow-y: auto
+}
+
+.modal-footer {
+	display: flex;
+	justify-content: flex-start;
+	.btn {
+		position: absolute;
+		right: 10px;
+	}
 }
