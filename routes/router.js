@@ -6,8 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'LOGO' });
 });
 
-router.get('/delirium', function(req, res, next) {
-  res.render('delirium', { title: 'LOGO' });
+router.get('/deliriumScoring', function(req, res, next) {
+  res.render('deliriumScoring', { title: 'LOGO' });
 });
 
 module.exports = router;
