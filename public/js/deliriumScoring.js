@@ -66,23 +66,23 @@ $(document).ready(function(){
     })
 
     $(".deliriumFinish").click(function(){
-        var deliriumPresent = '<h2 class="fs-title text-center">Delrium present !</h2> <br><br>'+
+        var deliriumPresent = '<h2 class="fs-title text-center">Criteria met!</h2> <br><br>'+
         '<div class="row justify-content-center">'+
         '<div class="col-3"> <img src="/img/orange-warning-icon-3.png" class="fit-image"> </div>'+
         '</div> <br><br>'+
         '<div class="row justify-content-center">'+
             '<div class="col-7 text-center">'+
-                '<h5>CAM-ICU positive</h5>'+
+                '<h5>CAM-ICU positive - Delirium present</h5>'+
             '</div>'+
         '</div>';
 
-        var noDelirium = '<h2 class="fs-title text-center">No delrium !</h2> <br><br>'+
+        var noDelirium = '<h2 class="fs-title text-center">Criteria not met!</h2> <br><br>'+
         '<div class="row justify-content-center">'+
         '<div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image"> </div>'+
         '</div> <br><br>'+
         '<div class="row justify-content-center">'+
             '<div class="col-7 text-center">'+
-                '<h5>CAM ICU negative</h5>'+
+                '<h5>CAM ICU negative - No Delirium</h5>'+
             '</div>'+
         '</div>';
 
