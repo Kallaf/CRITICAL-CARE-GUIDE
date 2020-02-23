@@ -10,4 +10,8 @@ router.get('/deliriumScoring', function(req, res, next) {
   res.render('deliriumScoring', { title: 'LOGO' });
 });
 
+router.get('/agitationScoring', function(req, res, next) {
+  res.render('agitationScoring', { title: 'LOGO' });
+});
+
 module.exports = router;
