@@ -6,12 +6,12 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'LOGO' });
 });
 
-router.get('/deliriumScoring', function(req, res, next) {
+router.get('/deliriumScoring.html', function(req, res, next) {
   res.render('deliriumScoring', { title: 'LOGO' });
 });
 
-router.get('/agitationScoring', function(req, res, next) {
-  res.render('agitationScoring', { title: 'LOGO' });
+router.get('/agitationRSSScoring.html', function(req, res, next) {
+  res.render('agitationRSSScoring', { title: 'LOGO' });
 });
 
 module.exports = router;
