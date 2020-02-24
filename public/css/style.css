@@ -6,6 +6,10 @@ body {
     background-size: cover;
 }
 
+h2{
+    color:brown;
+}
+
 header.masthead {
     background:none;
 }
@@ -98,6 +102,18 @@ td {
     display: inline;
 }
 
+.scoring-result{
+    background-color: #495057;
+    color:white;
+    padding:1%;
+    border-radius: 8px;
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.h3-sub-title{
+     font-family:Georgia, 'Times New Roman', Times, serif;
+}
 
 .modal,body.modal-open {
     padding-right: 0!important

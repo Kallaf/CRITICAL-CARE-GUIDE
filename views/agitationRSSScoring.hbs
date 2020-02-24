@@ -4,12 +4,12 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item">Agitation</li>
-            <li class="breadcrumb-item active" aria-current="page">RSS Scoring</li>
+            <li class="breadcrumb-item active" aria-current="page">RSS scoring system</li>
         </ol>
     </nav>
 
     <div class = "mainContent">
-        <h2 style="color:brown;">Instructions</h2>
+        <h2>Instructions</h2>
         <div class = "instruction bigInstructions">    
             <ol>
                 <li>
@@ -36,14 +36,13 @@
 
                     Patient has any movement to physical stimulation <div class="how-to-count score">(score -4).</div><br>
 
-                    Patient has no response to voice or physical stimulation <div class="how-to-count score">(score -5).</div><br>
-
+                    Patient has no response to voice or physical stimulation <div id="RASS-Table" class="how-to-count score">(score -5).</div>
                 </li>
 
             </ol>
         </div>
-        <h2 style="color:brown;">Richmond Agitation-Sedation Scale</h2>
-        <table class="table" id="RASS-Table">
+        <h2>Richmond Agitation-Sedation Scale</h2>
+        <table class="table">
             <thead class="thead-light">
                 <tr>
                 <th style="width: 5%" scope="col">Score</th>
@@ -53,58 +52,86 @@
             </thead>
             <tbody>
                 <tr>
-                <th scope="row"><a href="#">+4</a></th>
+                <th  scope="row"><a style="color:#003366" href="#RSS-Results">+4</a></th>
                 <td>Combative</td>
                 <td>Overtly combative or violent; immediate danger to staff</td>
                 </tr>
                 <tr>
-                <th scope="row"><a href="#">+3</a></th>
+                <th scope="row"><a style="color:#003b77" href="#RSS-Results">+3</a></th>
                 <td>Very agitated</td>
                 <td>Pulls on or removes tube(s) or catheter(s) or has aggressive behavior toward staff</td>
                 </tr>
                 <tr>
-                <th scope="row"><a href="#">+2</a></th>
+                <th scope="row"><a style="color:#004388" href="#RSS-Results">+2</a></th>
                 <td>agitated</td>
                 <td>Frequent nonpurposeful movement or patient–ventilator dyssynchrony</td>
                 </tr>
                 <tr>
-                <th scope="row"><a href="#">+1</a></th>
+                <th scope="row"><a style="color:#004b99" href="#RSS-Results">+1</a></th>
                 <td>Restless</td>
                 <td>Anxious or apprehensive but movements not aggressive or vigorous</td>
                 </tr>
-                
-                    <tr style="background-color: #e9ecef;">
-                    <th scope="row"><a href="#">0</a></th>
+                    <tr>
+                    <th scope="row"><a style="color:#0053aa" href="#RSS-Results">0</a></th>
                     <td>Alert and calm</td>
                     <td>Spontaneously pays attention to caregiver</td>
                     </tr>
                 <tr>
-                <th scope="row"><a href="#">-1</a></th>
+                <th scope="row"><a style="color:#0058bb" href="#RSS-Results">-1</a></th>
                 <td>Drowsy</td>
                 <td>Not fully alert, but has sustained (more than 10 seconds) awakening, with eye contact, to voice</td>
                 </tr>
                 <tr>
-                <th scope="row"><a href="#">-2</a></th>
+                <th scope="row"><a style="color:#0063cc" href="#RSS-Results">-2</a></th>
                 <td>Light sedation</td>
                 <td>Briefly (less than 10 seconds) awakens with eye contact to voice</td>
                 </tr>
                 <tr>
-                <th scope="row"><a href="#">-3</a></th>
+                <th scope="row"><a style="color:#006bdd" href="#RSS-Results">-3</a></th>
                 <td>Moderate sedation</td>
                 <td>Any movement (but no eye contact) to voice</td>
                 </tr>
                 <tr>
-                <th scope="row"><a href="#">-4</a></th>
+                <th scope="row"><a style="color:#0073ee" href="#RSS-Results">-4</a></th>
                 <td>Deep sedation</td>
                 <td>No response to voice, but any movement to physical stimulation</td>
                 </tr>
                 <tr>
-                <th scope="row"><a href="#">-5</a></th>
+                <th scope="row"><a style="color:#007bff" href="#RSS-Results">-5</a></th>
                 <td>Unarousable sedation</td>
                 <td>No response to voice or physical stimulation</td>
                 </tr>
             </tbody>
         </table>
+        
+        <h2>Results</h2>
+        <div id="RSS-Results" class="scoring-result" style="height:120px;">
+            Click on the desired score in the above table to show it's result
+        </div>
+        <br>
+        <h2>Next step</h2>
+        <div id="RSS-Results" class="scoring-result">
+            <h3 class="h3-sub-title">Management</h3>
+            <ul style="margin-left: 5%;">
+                <li>
+                    Patients with a RASS of -3 or less should have their sedation decreased or modified in order to achieve a RASS of -2 to 0.
+                </li>
+                <li>
+                    Patients with a RASS of 2 to 4 are not sedated enough and should be assessed for pain, anxiety, or delirium. The underlying etiology of the agitation should be investigated and appropriately treated to achieve a RASS of -2 to 0.
+                </li>
+            </ul>
+            <h3 class="h3-sub-title">Critical actions</h3>
+            <ul style="margin-left: 5%;">
+                <li>
+                    A RASS score should be obtained on all hospitalized patients and at regular interval in all mechanically ventilated patients.
+                </li>
+                <li>
+                    Unless a patient meets indication for deep sedation, a protocol for minimal sedation (RASS -2 to 0) should be used.
+                </li>
+            </ul>
+        </div>
+        
     </div>
+
 
 </div>
