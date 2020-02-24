@@ -37,6 +37,6 @@ $(document).ready(function(){
         renderRSSResult("-4","Patients with a RASS of ≤-3 should have their sedation decreased or modified in order to achieve a RASS of -2 to 0.");
     });
     $("#RASS-neg-5").click(function(){
-        renderRSSResult("+5","Patients with a RASS of ≤-3 should have their sedation decreased or modified in order to achieve a RASS of -2 to 0.");
+        renderRSSResult("-5","Patients with a RASS of ≤-3 should have their sedation decreased or modified in order to achieve a RASS of -2 to 0.");
     });
 });

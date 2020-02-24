@@ -102,6 +102,15 @@ td {
     display: inline;
 }
 
+a{
+    text-decoration: none !important;
+}
+
+.score-table-th{
+    border-radius: 50%;
+    color:white;
+}
+
 .scoring-result{
     background-color: #495057;
     color:white;
