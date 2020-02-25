@@ -1,10 +1,10 @@
-<div style = "margin-top: 120px;margin-left:5%;margin-right:5%;">
+<div style = "margin-top: 40px;margin-left:5%;margin-right:5%;">
     
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item">Agitation</li>
-            <li class="breadcrumb-item active" aria-current="page">RSS scoring system</li>
+            <li class="breadcrumb-item active" aria-current="page">Scoring</li>
         </ol>
     </nav>
 
@@ -36,12 +36,12 @@
 
                     Patient has any movement to physical stimulation <div class="how-to-count score">(score -4).</div><br>
 
-                    Patient has no response to voice or physical stimulation <div id="RASS-Table" class="how-to-count score">(score -5).</div>
+                    Patient has no response to voice or physical stimulation <div class="how-to-count score">(score -5).</div>
                 </li>
 
             </ol>
         </div>
-        <h2>Richmond Agitation-Sedation Scale</h2>
+        <h2 id="RASS-Table">Richmond Agitation-Sedation Scale</h2>
         <table class="table">
             <thead class="thead-light">
                 <tr>
@@ -52,61 +52,61 @@
             </thead>
             <tbody>
                 <tr>
-                <th  scope="row"><a id="RASS-pos-4" href="#RSS-Results"><div class="score-table-th"  style="background:#003366;">+4</div></a></th>
+                <th  scope="row"><a id="RASS-pos-4" href="#RASS-Results-title"><div class="score-table-th"  style="background:#003366;">+4</div></a></th>
                 <td>Combative</td>
                 <td>Overtly combative or violent; immediate danger to staff</td>
                 </tr>
                 <tr>
-                <th scope="row"><a id="RASS-pos-3" href="#RSS-Results"><div class="score-table-th" style="background:#003b77;">+3</div></a></th>
+                <th scope="row"><a id="RASS-pos-3" href="#RASS-Results-title"><div class="score-table-th" style="background:#003b77;">+3</div></a></th>
                 <td>Very agitated</td>
                 <td>Pulls on or removes tube(s) or catheter(s) or has aggressive behavior toward staff</td>
                 </tr>
                 <tr>
-                <th scope="row"><a id="RASS-pos-2" href="#RSS-Results"><div class="score-table-th" style="background:#004388">+2</div></a></th>
+                <th scope="row"><a id="RASS-pos-2" href="#RASS-Results-title"><div class="score-table-th" style="background:#004388">+2</div></a></th>
                 <td>Agitated</td>
                 <td>Frequent nonpurposeful movement or patient–ventilator dyssynchrony</td>
                 </tr>
                 <tr>
-                <th scope="row"><a id="RASS-pos-1" href="#RSS-Results"><div class="score-table-th" style="background:#004b99">+1</div></a></th>
+                <th scope="row"><a id="RASS-pos-1" href="#RASS-Results-title"><div class="score-table-th" style="background:#004b99">+1</div></a></th>
                 <td>Restless</td>
                 <td>Anxious or apprehensive but movements not aggressive or vigorous</td>
                 </tr>
                     <tr>
-                    <th scope="row"><a  id="RASS-0" href="#RSS-Results"><div class="score-table-th" style="background:#0053aa">0</div></a></th>
+                    <th scope="row"><a  id="RASS-0" href="#RASS-Results-title"><div class="score-table-th" style="background:#0053aa">0</div></a></th>
                     <td>Alert and calm</td>
                     <td>Spontaneously pays attention to caregiver</td>
                     </tr>
                 <tr>
-                <th scope="row"><a id="RASS-neg-1" href="#RSS-Results"><div class="score-table-th" style="background:#0058bb">-1</div></a></th>
+                <th scope="row"><a id="RASS-neg-1" href="#RASS-Results-title"><div class="score-table-th" style="background:#0058bb">-1</div></a></th>
                 <td>Drowsy</td>
                 <td>Not fully alert, but has sustained (more than 10 seconds) awakening, with eye contact, to voice</td>
                 </tr>
                 <tr>
-                <th scope="row"><a id="RASS-neg-2" href="#RSS-Results"><div class="score-table-th" style="background:#0063cc">-2</div></a></th>
+                <th scope="row"><a id="RASS-neg-2" href="#RASS-Results-title"><div class="score-table-th" style="background:#0063cc">-2</div></a></th>
                 <td>Light sedation</td>
                 <td>Briefly (less than 10 seconds) awakens with eye contact to voice</td>
                 </tr>
                 <tr>
-                <th scope="row"><a id="RASS-neg-3" href="#RSS-Results"><div class="score-table-th" style="background:#006bdd">-3</div></a></th>
+                <th scope="row"><a id="RASS-neg-3" href="#RASS-Results-title"><div class="score-table-th" style="background:#006bdd">-3</div></a></th>
                 <td>Moderate sedation</td>
                 <td>Any movement (but no eye contact) to voice</td>
                 </tr>
                 <tr>
-                <th scope="row"><a id="RASS-neg-4" href="#RSS-Results"><div class="score-table-th" style="background:#0073ee">-4</div></a></th>
+                <th scope="row"><a id="RASS-neg-4" href="#RASS-Results-title"><div class="score-table-th" style="background:#0073ee">-4</div></a></th>
                 <td>Deep sedation</td>
                 <td>No response to voice, but any movement to physical stimulation</td>
                 </tr>
                 <tr>
-                <th scope="row"><a id="RASS-neg-5" href="#RSS-Results"><div class="score-table-th" style="background:#007bff">-5</div></a></th>
+                <th scope="row"><a id="RASS-neg-5" href="#RASS-Results-title"><div class="score-table-th" style="background:#007bff">-5</div></a></th>
                 <td>Unarousable sedation</td>
                 <td>No response to voice or physical stimulation</td>
                 </tr>
             </tbody>
         </table>
         
-        <h2>Results</h2>
+        <h2 id="RASS-Results-title" >Results</h2>
         <div class="scoring-result">
-            <div id="RSS-Results"></div>
+            <div id="RASS-Results"></div>
         </div>
         <br>
         <h2>Next steps</h2>
