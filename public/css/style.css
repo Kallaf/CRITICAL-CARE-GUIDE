@@ -113,6 +113,11 @@ a{
 .score-table-th{
     border-radius: 50%;
     color:white;
+    display:inline-block;
+    padding: 0;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
 }
 
 .scoring-result{

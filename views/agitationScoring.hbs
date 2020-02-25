@@ -8,130 +8,233 @@
         </ol>
     </nav>
 
-    <div class = "mainContent">
-        <h2>Instructions</h2>
-        <div class = "instruction bigInstructions">    
-            <ol>
-                <li>
-                    Observe patient. Is patient alert and calm (score 0)?
-                </li>
-                <li>
-                    Does patient have behavior that is consistent with restlessness or agitation?
+    
+<div class="mainContent">
+  
+    <ul class="nav nav-tabs" id="agitationScoringTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="RASS-tab" data-toggle="tab" href="#RASS" role="tab" aria-controls="RASS" aria-selected="true">RASS</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="SAS-tab" data-toggle="tab" href="#SAS" role="tab" aria-controls="SAS" aria-selected="false">SAS</a>
+    </li>
+    </ul>
+    <div class="tab-content" id="agitationScoringTabContent">
+        <div class="tab-pane fade show active" id="RASS" role="tabpanel" aria-labelledby="RASS-tab">
+                <div class = "mainContent">
+                    <h2>Instructions</h2>
+                    <div class = "instruction bigInstructions">    
+                        <ol>
+                            <li>
+                                Observe patient. Is patient alert and calm (score 0)?
+                            </li>
+                            <li>
+                                Does patient have behavior that is consistent with restlessness or agitation?
+                                <br>
+                                <div class="how-to-count"> Assign score +1 to +4 using the criteria listed below.<br></div>
+                            </li>
+                            <li>
+                                If patient is not alert, in a loud speaking voice state patient's name and direct patient to open eyes and look at speaker.<br> Repeat once if necessary. Can prompt patient to continue looking at speaker.
+
+                                Patient has eye opening and eye contact, which is sustained for more than 10 seconds <div class="how-to-count score">(score -1).</div><br>
+
+                                Patient has eye opening and eye contact, but this is not sustained for 10 seconds <div class="how-to-count score">(score -2).</div><br>
+
+                                Patient has any movement in response to voice, excluding eye contact <div class="how-to-count score">(score -3).</div><br>
+
+                            </li>
+
+                            <li>
+                                If patient does not respond to voice, physically stimulate patient by shaking shoulder and then rubbing sternum if there is no response.
+
+                                Patient has any movement to physical stimulation <div class="how-to-count score">(score -4).</div><br>
+
+                                Patient has no response to voice or physical stimulation <div class="how-to-count score">(score -5).</div>
+                            </li>
+
+                        </ol>
+                    </div>
+                    <h2 id="RASS-Table">Richmond Agitation-Sedation Scale</h2>
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                            <th style="width: 10%" scope="col">Score</th>
+                            <th style="width: 20%" scope="col">Classification</th>
+                            <th style="width: 69%" scope="col">(RASS)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th  scope="row"><a id="RASS-pos-4" href="#RASS-Results-title"><div class="score-table-th"  style="background:#003366;">+4</div></a></th>
+                            <td>Combative</td>
+                            <td>Overtly combative or violent; immediate danger to staff</td>
+                            </tr>
+                            <tr>
+                            <th scope="row"><a id="RASS-pos-3" href="#RASS-Results-title"><div class="score-table-th" style="background:#003b77;">+3</div></a></th>
+                            <td>Very agitated</td>
+                            <td>Pulls on or removes tube(s) or catheter(s) or has aggressive behavior toward staff</td>
+                            </tr>
+                            <tr>
+                            <th scope="row"><a id="RASS-pos-2" href="#RASS-Results-title"><div class="score-table-th" style="background:#004388">+2</div></a></th>
+                            <td>Agitated</td>
+                            <td>Frequent nonpurposeful movement or patient–ventilator dyssynchrony</td>
+                            </tr>
+                            <tr>
+                            <th scope="row"><a id="RASS-pos-1" href="#RASS-Results-title"><div class="score-table-th" style="background:#004b99">+1</div></a></th>
+                            <td>Restless</td>
+                            <td>Anxious or apprehensive but movements not aggressive or vigorous</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><a  id="RASS-0" href="#RASS-Results-title"><div class="score-table-th" style="background:#0053aa">0</div></a></th>
+                                <td>Alert and calm</td>
+                                <td>Spontaneously pays attention to caregiver</td>
+                            </tr>
+                            <tr>
+                            <th scope="row"><a id="RASS-neg-1" href="#RASS-Results-title"><div class="score-table-th" style="background:#0053aa">-1</div></a></th>
+                            <td>Drowsy</td>
+                            <td>Not fully alert, but has sustained (more than 10 seconds) awakening, with eye contact, to voice</td>
+                            </tr>
+                            <tr>
+                            <th scope="row"><a id="RASS-neg-2" href="#RASS-Results-title"><div class="score-table-th" style="background:#004b99">-2</div></a></th>
+                            <td>Light sedation</td>
+                            <td>Briefly (less than 10 seconds) awakens with eye contact to voice</td>
+                            </tr>
+                            <tr>
+                            <th scope="row"><a id="RASS-neg-3" href="#RASS-Results-title"><div class="score-table-th" style="background:#004388">-3</div></a></th>
+                            <td>Moderate sedation</td>
+                            <td>Any movement (but no eye contact) to voice</td>
+                            </tr>
+                            <tr>
+                            <th scope="row"><a id="RASS-neg-4" href="#RASS-Results-title"><div class="score-table-th" style="background:#003b77">-4</div></a></th>
+                            <td>Deep sedation</td>
+                            <td>No response to voice, but any movement to physical stimulation</td>
+                            </tr>
+                            <tr>
+                            <th scope="row"><a id="RASS-neg-5" href="#RASS-Results-title"><div class="score-table-th" style="background:#003366;">-5</div></a></th>
+                            <td>Unarousable sedation</td>
+                            <td>No response to voice or physical stimulation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h2 id="RASS-Results-title" >Results</h2>
+                    <div class="scoring-result">
+                        <div id="RASS-Results"></div>
+                    </div>
                     <br>
-                    <div class="how-to-count"> Assign score +1 to +4 using the criteria listed below.<br></div>
-                </li>
-                <li>
-                    If patient is not alert, in a loud speaking voice state patient's name and direct patient to open eyes and look at speaker.<br> Repeat once if necessary. Can prompt patient to continue looking at speaker.
-
-                    Patient has eye opening and eye contact, which is sustained for more than 10 seconds <div class="how-to-count score">(score -1).</div><br>
-
-                    Patient has eye opening and eye contact, but this is not sustained for 10 seconds <div class="how-to-count score">(score -2).</div><br>
-
-                    Patient has any movement in response to voice, excluding eye contact <div class="how-to-count score">(score -3).</div><br>
-
-                </li>
-
-                <li>
-                    If patient does not respond to voice, physically stimulate patient by shaking shoulder and then rubbing sternum if there is no response.
-
-                    Patient has any movement to physical stimulation <div class="how-to-count score">(score -4).</div><br>
-
-                    Patient has no response to voice or physical stimulation <div class="how-to-count score">(score -5).</div>
-                </li>
-
-            </ol>
+                    <h2>Next steps</h2>
+                    <div class="scoring-result">
+                        <h3 class="h3-sub-title">Management</h3>
+                        <ul style="margin-left: 5%;">
+                            <li>
+                                Patients with a RASS of -3 or less should have their sedation decreased or modified in order to achieve a RASS of -2 to 0.
+                            </li>
+                            <li>
+                                Patients with a RASS of 2 to 4 are not sedated enough and should be assessed for pain, anxiety, or delirium. The underlying etiology of the agitation should be investigated and appropriately treated to achieve a RASS of -2 to 0.
+                            </li>
+                        </ul>
+                        <h3 class="h3-sub-title">Critical actions</h3>
+                        <ul style="margin-left: 5%;">
+                            <li>
+                                A RASS score should be obtained on all hospitalized patients and at regular interval in all mechanically ventilated patients.
+                            </li>
+                            <li>
+                                Unless a patient meets indication for deep sedation, a protocol for minimal sedation (RASS -2 to 0) should be used.
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
         </div>
-        <h2 id="RASS-Table">Richmond Agitation-Sedation Scale</h2>
-        <table class="table">
-            <thead class="thead-light">
-                <tr>
-                <th style="width: 1%" scope="col">score</th>
-                <th style="width: 10%" scope="col">classification</th>
-                <th style="width: 89%" scope="col">(RASS)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <th  scope="row"><a id="RASS-pos-4" href="#RASS-Results-title"><div class="score-table-th"  style="background:#003366;">+4</div></a></th>
-                <td>Combative</td>
-                <td>Overtly combative or violent; immediate danger to staff</td>
-                </tr>
-                <tr>
-                <th scope="row"><a id="RASS-pos-3" href="#RASS-Results-title"><div class="score-table-th" style="background:#003b77;">+3</div></a></th>
-                <td>Very agitated</td>
-                <td>Pulls on or removes tube(s) or catheter(s) or has aggressive behavior toward staff</td>
-                </tr>
-                <tr>
-                <th scope="row"><a id="RASS-pos-2" href="#RASS-Results-title"><div class="score-table-th" style="background:#004388">+2</div></a></th>
-                <td>Agitated</td>
-                <td>Frequent nonpurposeful movement or patient–ventilator dyssynchrony</td>
-                </tr>
-                <tr>
-                <th scope="row"><a id="RASS-pos-1" href="#RASS-Results-title"><div class="score-table-th" style="background:#004b99">+1</div></a></th>
-                <td>Restless</td>
-                <td>Anxious or apprehensive but movements not aggressive or vigorous</td>
-                </tr>
-                    <tr>
-                    <th scope="row"><a  id="RASS-0" href="#RASS-Results-title"><div class="score-table-th" style="background:#0053aa">0</div></a></th>
-                    <td>Alert and calm</td>
-                    <td>Spontaneously pays attention to caregiver</td>
-                    </tr>
-                <tr>
-                <th scope="row"><a id="RASS-neg-1" href="#RASS-Results-title"><div class="score-table-th" style="background:#0058bb">-1</div></a></th>
-                <td>Drowsy</td>
-                <td>Not fully alert, but has sustained (more than 10 seconds) awakening, with eye contact, to voice</td>
-                </tr>
-                <tr>
-                <th scope="row"><a id="RASS-neg-2" href="#RASS-Results-title"><div class="score-table-th" style="background:#0063cc">-2</div></a></th>
-                <td>Light sedation</td>
-                <td>Briefly (less than 10 seconds) awakens with eye contact to voice</td>
-                </tr>
-                <tr>
-                <th scope="row"><a id="RASS-neg-3" href="#RASS-Results-title"><div class="score-table-th" style="background:#006bdd">-3</div></a></th>
-                <td>Moderate sedation</td>
-                <td>Any movement (but no eye contact) to voice</td>
-                </tr>
-                <tr>
-                <th scope="row"><a id="RASS-neg-4" href="#RASS-Results-title"><div class="score-table-th" style="background:#0073ee">-4</div></a></th>
-                <td>Deep sedation</td>
-                <td>No response to voice, but any movement to physical stimulation</td>
-                </tr>
-                <tr>
-                <th scope="row"><a id="RASS-neg-5" href="#RASS-Results-title"><div class="score-table-th" style="background:#007bff">-5</div></a></th>
-                <td>Unarousable sedation</td>
-                <td>No response to voice or physical stimulation</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <h2 id="RASS-Results-title" >Results</h2>
-        <div class="scoring-result">
-            <div id="RASS-Results"></div>
+        <div class="tab-pane fade" id="SAS" role="tabpanel" aria-labelledby="SAS-tab">
+            <div class = "mainContent">
+                    <h2>Riker Sedation-Agitation Scale (SAS)</h2>
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                            <th style="width: 10%" scope="col">Score</th>
+                            <th style="width: 20%" scope="col">category</th>
+                            <th style="width: 64%" scope="col">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">7</th>
+                                <td>Dangerous Agitation</td>
+                                <td>Pulling at ET tube, trying to remove catheters, climbing over bedrail, striking at staff, thrashing side-to-side</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>Very Agitated</td>
+                                <td>Requiring restraint and frequent verbal reminding of limits, biting ETT </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Agitated</td>
+                                <td>Anxious or physically agitated, calms to verbal instructions</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Calm and Cooperative</td>
+                                <td>Calm, easily arousable, follows commands</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Sedated</td>
+                                <td>Difficult to arouse but awakens to verbal stimuli or gentle
+ shaking, follows simple commands but drifts off again</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Very Sedated</td>
+                                <td>Arouses to physical stimuli but does not communicate or
+ follow commands, may move spontaneously</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Unarousable</td>
+                                <td>Minimal or no response to noxious stimuli, does not
+ communicate or follow commands</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Guidelines for SAS Assessment</h2>
+                    <div class = "instruction bigInstructions">    
+                        <ol>
+                            <li>
+                                Agitated patients are scored by their most severe degree of agitation as described
+                            </li>
+                            <li>
+                                If patient is awake or awakens easily to voice (“awaken” means responds with voice or head
+                                shaking to a question or follows commands), <div class="how-to-count  score"> that’s a SAS 4 </div> (same as calm and appropriate –
+                                might even be napping). 
+                            </li>
+                            <li>
+                                If more stimuli such as shaking is required but patient eventually does awaken, 
+                                <div class="how-to-count  score">that’s SAS 3.</div> 
+                            </li>
+
+                            <li>
+                                If patient arouses to stronger physical stimuli (may be noxious) but never awakens to the
+                                point of responding yes/no or following commands,
+                                <div class="how-to-count score"> that’s a SAS 2. </div>
+                            </li>
+                            <li>
+                                Little or no response to noxious physical stimuli represents <div class="how-to-count score"> a SAS 1. </div>
+                            </li>
+
+                        </ol>
+                    </div>
+
+                </div>
         </div>
-        <br>
-        <h2>Next steps</h2>
-        <div class="scoring-result">
-            <h3 class="h3-sub-title">Management</h3>
-            <ul style="margin-left: 5%;">
-                <li>
-                    Patients with a RASS of -3 or less should have their sedation decreased or modified in order to achieve a RASS of -2 to 0.
-                </li>
-                <li>
-                    Patients with a RASS of 2 to 4 are not sedated enough and should be assessed for pain, anxiety, or delirium. The underlying etiology of the agitation should be investigated and appropriately treated to achieve a RASS of -2 to 0.
-                </li>
-            </ul>
-            <h3 class="h3-sub-title">Critical actions</h3>
-            <ul style="margin-left: 5%;">
-                <li>
-                    A RASS score should be obtained on all hospitalized patients and at regular interval in all mechanically ventilated patients.
-                </li>
-                <li>
-                    Unless a patient meets indication for deep sedation, a protocol for minimal sedation (RASS -2 to 0) should be used.
-                </li>
-            </ul>
-        </div>
-        
     </div>
+
+</div>
+
+
+
 
 
 </div>
