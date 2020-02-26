@@ -2,7 +2,7 @@
     
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
             <li class="breadcrumb-item">Agitation</li>
             <li class="breadcrumb-item active" aria-current="page">Scoring</li>
         </ol>
@@ -22,117 +22,137 @@
     <div class="tab-content" id="agitationScoringTabContent">
         <div class="tab-pane fade show active" id="RASS" role="tabpanel" aria-labelledby="RASS-tab">
                 <div class = "mainContent">
-                    <h2>Instructions</h2>
-                    <div class = "instruction bigInstructions">    
-                        <ol>
-                            <li>
-                                Observe patient. Is patient alert and calm (score 0)?
-                            </li>
-                            <li>
-                                Does patient have behavior that is consistent with restlessness or agitation?
-                                <br>
-                                <div class="how-to-count"> Assign score +1 to +4 using the criteria listed below.<br></div>
-                            </li>
-                            <li>
-                                If patient is not alert, in a loud speaking voice state patient's name and direct patient to open eyes and look at speaker.<br> Repeat once if necessary. Can prompt patient to continue looking at speaker.
-
-                                Patient has eye opening and eye contact, which is sustained for more than 10 seconds <div class="how-to-count score">(score -1).</div><br>
-
-                                Patient has eye opening and eye contact, but this is not sustained for 10 seconds <div class="how-to-count score">(score -2).</div><br>
-
-                                Patient has any movement in response to voice, excluding eye contact <div class="how-to-count score">(score -3).</div><br>
-
-                            </li>
-
-                            <li>
-                                If patient does not respond to voice, physically stimulate patient by shaking shoulder and then rubbing sternum if there is no response.
-
-                                Patient has any movement to physical stimulation <div class="how-to-count score">(score -4).</div><br>
-
-                                Patient has no response to voice or physical stimulation <div class="how-to-count score">(score -5).</div>
-                            </li>
-
-                        </ol>
-                    </div>
                     <h2 id="RASS-Table">Richmond Agitation-Sedation Scale</h2>
-                    <table class="table">
-                        <thead class="thead-light">
-                            <tr>
-                            <th style="width: 10%" scope="col">Score</th>
-                            <th style="width: 20%" scope="col">Classification</th>
-                            <th style="width: 70%" scope="col">(RASS)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <th  scope="row"><a id="RASS-pos-4" href="#RASS-Results-title"><div class="score-table-th"  style="background:#003366;">+4</div></a></th>
-                            <td>Combative</td>
-                            <td>Overtly combative or violent; immediate danger to staff</td>
-                            </tr>
-                            <tr>
-                            <th scope="row"><a id="RASS-pos-3" href="#RASS-Results-title"><div class="score-table-th" style="background:#003b77;">+3</div></a></th>
-                            <td>Very agitated</td>
-                            <td>Pulls on or removes tube(s) or catheter(s) or has aggressive behavior toward staff</td>
-                            </tr>
-                            <tr>
-                            <th scope="row"><a id="RASS-pos-2" href="#RASS-Results-title"><div class="score-table-th" style="background:#004388">+2</div></a></th>
-                            <td>Agitated</td>
-                            <td>Frequent nonpurposeful movement or patient–ventilator dyssynchrony</td>
-                            </tr>
-                            <tr>
-                            <th scope="row"><a id="RASS-pos-1" href="#RASS-Results-title"><div class="score-table-th" style="background:#004b99">+1</div></a></th>
-                            <td>Restless</td>
-                            <td>Anxious or apprehensive but movements not aggressive or vigorous</td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a  id="RASS-0" href="#RASS-Results-title"><div class="score-table-th" style="background:#0053aa">0</div></a></th>
-                                <td>Alert and calm</td>
-                                <td>Spontaneously pays attention to caregiver</td>
-                            </tr>
-                            <tr>
-                            <th scope="row"><a id="RASS-neg-1" href="#RASS-Results-title"><div class="score-table-th" style="background:#0053aa">-1</div></a></th>
-                            <td>Drowsy</td>
-                            <td>Not fully alert, but has sustained (more than 10 seconds) awakening, with eye contact, to voice</td>
-                            </tr>
-                            <tr>
-                            <th scope="row"><a id="RASS-neg-2" href="#RASS-Results-title"><div class="score-table-th" style="background:#004b99">-2</div></a></th>
-                            <td>Light sedation</td>
-                            <td>Briefly (less than 10 seconds) awakens with eye contact to voice</td>
-                            </tr>
-                            <tr>
-                            <th scope="row"><a id="RASS-neg-3" href="#RASS-Results-title"><div class="score-table-th" style="background:#004388">-3</div></a></th>
-                            <td>Moderate sedation</td>
-                            <td>Any movement (but no eye contact) to voice</td>
-                            </tr>
-                            <tr>
-                            <th scope="row"><a id="RASS-neg-4" href="#RASS-Results-title"><div class="score-table-th" style="background:#003b77">-4</div></a></th>
-                            <td>Deep sedation</td>
-                            <td>No response to voice, but any movement to physical stimulation</td>
-                            </tr>
-                            <tr>
-                            <th scope="row"><a id="RASS-neg-5" href="#RASS-Results-title"><div class="score-table-th" style="background:#003366;">-5</div></a></th>
-                            <td>Unarousable sedation</td>
-                            <td>No response to voice or physical stimulation</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <h2 id="RASS-Results-title" >Results</h2>
-                    <div class="scoring-result">
-                        <div id="RASS-Results"></div>
+                    <div>
+                      <ul class="nav nav-pills mb-3 not-table" id="pills-tab-RASS" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-RASS-pos-4-tab" data-toggle="pill" href="#pills-RASS-pos-4" role="tab" aria-controls="pills-RASS-pos-4" aria-selected="true">+4</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-RASS-pos-3-tab" data-toggle="pill" href="#pills-RASS-pos-3" role="tab" aria-controls="pills-RASS-pos-3" aria-selected="false">+3</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-RASS-pos-2-tab" data-toggle="pill" href="#pills-RASS-pos-2" role="tab" aria-controls="pills-RASS-pos-2" aria-selected="false">+2</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-RASS-pos-1-tab" data-toggle="pill" href="#pills-RASS-pos-1" role="tab" aria-controls="pills-RASS-pos-1" aria-selected="false">+1</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-RASS-0-tab" data-toggle="pill" href="#pills-RASS-0" role="tab" aria-controls="pills-RASS-0" aria-selected="false">0</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-RASS-neg-1-tab" data-toggle="pill" href="#pills-RASS-neg-1" role="tab" aria-controls="pills-RASS-neg-1" aria-selected="false">-1</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-RASS-neg-2-tab" data-toggle="pill" href="#pills-RASS-neg-2" role="tab" aria-controls="pills-RASS-neg-2" aria-selected="false">-2</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-RASS-neg-3-tab" data-toggle="pill" href="#pills-RASS-neg-3" role="tab" aria-controls="pills-RASS-neg-3" aria-selected="false">-3</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-RASS-neg-4-tab" data-toggle="pill" href="#pills-RASS-neg-4" role="tab" aria-controls="pills-RASS-neg-4" aria-selected="false">-4</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-RASS-neg-5-tab" data-toggle="pill" href="#pills-RASS-neg-5" role="tab" aria-controls="pills-RASS-neg-5" aria-selected="false">-5</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="pills-RASS-tabContent">
+                        <div class="tab-pane fade show active" id="pills-RASS-pos-4" role="tabpanel" aria-labelledby="pills-RASS-pos-4-tab">
+                          <div class="scoring-result">
+                            <h4 class="h3-sub-title">Combative</h4>
+                            <p>Overtly combative or violent; immediate danger to staff</p>
+                            <h4 class="h3-sub-title">Result</h4>
+                            <p>Patients with a RASS of 2 to 4 are not sedated enough and should be assessed for pain, anxiety, or delirium. The underlying etiology of the agitation should be investigated and appropriately treated to achieve a RASS of -2 to 0.</p>
+                          </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pills-RASS-pos-3" role="tabpanel" aria-labelledby="pills-RASS-pos-3-tab">
+                          <div class="scoring-result">
+                            <h4 class="h3-sub-title">Very agitated</h4>
+                            <p>Pulls on or removes tube(s) or catheter(s) or has aggressive behavior toward staff</p>
+                            <h4 class="h3-sub-title">Result</h4>
+                            <p>Patients with a RASS of 2 to 4 are not sedated enough and should be assessed for pain, anxiety, or delirium. The underlying etiology of the agitation should be investigated and appropriately treated to achieve a RASS of -2 to 0.</p>  
+                          </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pills-RASS-pos-2" role="tabpanel" aria-labelledby="pills-RASS-pos-2-tab">
+                          <div class="scoring-result">
+                            <h4 class="h3-sub-title">Agitated</h4>
+                            <p>Frequent nonpurposeful movement or patient–ventilator dyssynchrony</p>
+                            <h4 class="h3-sub-title">Result</h4>
+                            <p>Patients with a RASS of 2 to 4 are not sedated enough and should be assessed for pain, anxiety, or delirium. The underlying etiology of the agitation should be investigated and appropriately treated to achieve a RASS of -2 to 0.</p>  
+                          </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pills-RASS-pos-1" role="tabpanel" aria-labelledby="pills-RASS-pos-1-tab">
+                          <div class="scoring-result">
+                            <h4 class="h3-sub-title">Restless</h4>
+                            <p>Anxious or apprehensive but movements not aggressive or vigorous</p>
+                            <h4 class="h3-sub-title">Result</h4>
+                            <p>Patients with a RASS of -2 to 1 are properly sedated.</p>  
+                          </div>
+                        </div>
+                              
+                        <div class="tab-pane fade" id="pills-RASS-0" role="tabpanel" aria-labelledby="pills-RASS-0-tab">
+                          <div class="scoring-result">
+                            <h4 class="h3-sub-title">Alert and calm</h4>
+                            <p>Spontaneously pays attention to caregiver</p>
+                            <h4 class="h3-sub-title">Result</h4>
+                            <p>Patients with a RASS of -2 to 1 are properly sedated.</p>  
+                          </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pills-RASS-neg-1" role="tabpanel" aria-labelledby="pills-RASS-neg-1-tab">
+                          <div class="scoring-result">
+                            <h4 class="h3-sub-title">Drowsy</h4>
+                            <p>Not fully alert, but has sustained (more than 10 seconds) awakening, with eye contact, to voice</p>
+                            <h4 class="h3-sub-title">Result</h4>
+                            <p>Patients with a RASS of -2 to 1 are properly sedated.</p>  
+                          </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pills-RASS-neg-2" role="tabpanel" aria-labelledby="pills-RASS-neg-2-tab">
+                          <div class="scoring-result">
+                            <h4 class="h3-sub-title">Light sedation</h4>
+                            <p>Briefly (less than 10 seconds) awakens with eye contact to voice</p>
+                            <h4 class="h3-sub-title">Result</h4>
+                            <p>Patients with a RASS of -2 to 1 are properly sedated.</p>  
+                          </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pills-RASS-neg-3" role="tabpanel" aria-labelledby="pills-RASS-neg-3-tab">
+                          <div class="scoring-result">
+                            <h4 class="h3-sub-title">Moderate sedation</h4>
+                            <p>Any movement (but no eye contact) to voice</p>
+                            <h4 class="h3-sub-title">Result</h4>
+                            <p>Patients with a RASS of ≤-3 should have their sedation decreased or modified in order to achieve a RASS of -2 to 0.</p>  
+                          </div>
+                        </div>
+                        
+
+                        <div class="tab-pane fade" id="pills-RASS-neg-4" role="tabpanel" aria-labelledby="pills-RASS-neg-4-tab">
+                          <div class="scoring-result">
+                            <h4 class="h3-sub-title">Deep sedation</h4>
+                            <p>No response to voice, but any movement to physical stimulation</p>
+                            <h4 class="h3-sub-title">Result</h4>
+                            <p>Patients with a RASS of ≤-3 should have their sedation decreased or modified in order to achieve a RASS of -2 to 0.</p>  
+                          </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pills-RASS-neg-5" role="tabpanel" aria-labelledby="pills-RASS-neg-5-tab">
+                          <div class="scoring-result">
+                            <h4 class="h3-sub-title">Unarousable sedation</h4>
+                            <p>No response to voice or physical stimulation</p>
+                            <h4 class="h3-sub-title">Result</h4>
+                            <p>Patients with a RASS of ≤-3 should have their sedation decreased or modified in order to achieve a RASS of -2 to 0.</p>  
+                          </div>
+                        </div>
+
+                      </div>
                     </div>
                     <br>
                     <h2>Next steps</h2>
                     <div class="scoring-result">
-                        <h3 class="h3-sub-title">Management</h3>
-                        <ul style="margin-left: 5%;">
-                            <li>
-                                Patients with a RASS of -3 or less should have their sedation decreased or modified in order to achieve a RASS of -2 to 0.
-                            </li>
-                            <li>
-                                Patients with a RASS of 2 to 4 are not sedated enough and should be assessed for pain, anxiety, or delirium. The underlying etiology of the agitation should be investigated and appropriately treated to achieve a RASS of -2 to 0.
-                            </li>
-                        </ul>
                         <h3 class="h3-sub-title">Critical actions</h3>
                         <ul style="margin-left: 5%;">
                             <li>
@@ -149,84 +169,93 @@
         <div class="tab-pane fade" id="SAS" role="tabpanel" aria-labelledby="SAS-tab">
             <div class = "mainContent">
                     <h2>Riker Sedation-Agitation Scale (SAS)</h2>
-                    <table class="table">
-                        <thead class="thead-light">
-                            <tr>
-                                <th style="width: 10%" scope="col">Score</th>
-                                <th style="width: 20%" scope="col">category</th>
-                                <th style="width: 70%" scope="col">Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">7</th>
-                                <td>Dangerous Agitation</td>
-                                <td>Pulling at ET tube, trying to remove catheters, climbing over bedrail, striking at staff, thrashing side-to-side</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">6</th>
-                                <td>Very Agitated</td>
-                                <td>Requiring restraint and frequent verbal reminding of limits, biting ETT </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>Agitated</td>
-                                <td>Anxious or physically agitated, calms to verbal instructions</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>Calm and Cooperative</td>
-                                <td>Calm, easily arousable, follows commands</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Sedated</td>
-                                <td>Difficult to arouse but awakens to verbal stimuli or gentle
- shaking, follows simple commands but drifts off again</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Very Sedated</td>
-                                <td>Arouses to physical stimuli but does not communicate or
- follow commands, may move spontaneously</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Unarousable</td>
-                                <td>Minimal or no response to noxious stimuli, does not
- communicate or follow commands</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div>
+                      <ul class="nav nav-pills mb-3 not-table" id="pills-tab-SAS" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-dangerous-agitation-tab" data-toggle="pill" href="#pills-dangerous-agitation" role="tab" aria-controls="pills-dangerous-agitation" aria-selected="true">7</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-very-agitated-tab" data-toggle="pill" href="#pills-very-agitated" role="tab" aria-controls="pills-very-agitated" aria-selected="false">6</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-agitated-tab" data-toggle="pill" href="#pills-agitated" role="tab" aria-controls="pills-agitated" aria-selected="false">5</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-calm-cooperative-tab" data-toggle="pill" href="#pills-calm-cooperative" role="tab" aria-controls="pills-calm-cooperative" aria-selected="false">4</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-sedated-tab" data-toggle="pill" href="#pills-sedated" role="tab" aria-controls="pills-sedated" aria-selected="false">3</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-very-sedated-tab2" data-toggle="pill" href="#pills-very-sedated" role="tab" aria-controls="pills-very-sedated" aria-selected="false">2</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-unarousable-tab3" data-toggle="pill" href="#pills-unarousable" role="tab" aria-controls="pills-unarousable" aria-selected="false">1</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="pills-SAS-tabContent">
+                        <div class="tab-pane fade show active" id="pills-dangerous-agitation" role="tabpanel" aria-labelledby="pills-dangerous-agitation-tab">
+                        <div class="scoring-result">
+                          <h4 class="h3-sub-title">Dangerous Agitation</h4>
+                          <p>Pulling at ET tube, trying to remove catheters, climbing over bedrail, striking at staff, thrashing side-to-side</p>
+                        </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-very-agitated" role="tabpanel" aria-labelledby="pills-very-agitated-tab">
+                        <div class="scoring-result">
+                          <h4 class="h3-sub-title">Very Agitated</h4>
+                          <p>
+                            Requiring restraint and frequent verbal reminding of limits, biting ETT 
+                          </p>
+                        </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-agitated" role="tabpanel" aria-labelledby="pills-agitated-tab">
+                        <div class="scoring-result">
+                          <h4 class="h3-sub-title">Agitated</h4>
+                          <p>
+                            Anxious or physically agitated, calms to verbal instructions
+                          </p>
+                        </div>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="pills-calm-cooperative" role="tabpanel" aria-labelledby="pills-calm-cooperative-tab">
+                        <div class="scoring-result">
+                          <h4 class="h3-sub-title">Calm and Cooperative</h4>
+                          <p>
+                            Calm, easily arousable, follows commands  
+                          </p>
+                        </div>
+                        </div>
 
-                    <h2>Guidelines for SAS Assessment</h2>
-                    <div class = "instruction bigInstructions">    
-                        <ol>
-                            <li>
-                                Agitated patients are scored by their most severe degree of agitation as described
-                            </li>
-                            <li>
-                                If patient is awake or awakens easily to voice (“awaken” means responds with voice or head
-                                shaking to a question or follows commands), <div class="how-to-count  score"> that’s a SAS 4 </div> (same as calm and appropriate –
-                                might even be napping). 
-                            </li>
-                            <li>
-                                If more stimuli such as shaking is required but patient eventually does awaken, 
-                                <div class="how-to-count  score">that’s SAS 3.</div> 
-                            </li>
+                        <div class="tab-pane fade" id="pills-sedated" role="tabpanel" aria-labelledby="pills-sedated-tab">
+                          <div class="scoring-result">
+                              <h4 class="h3-sub-title">Sedated</h4>
+                              <p>
+                                Difficult to arouse but awakens to verbal stimuli or gentle shaking, follows simple commands but drifts off again 
+                              </p>
+                          </div>
+                        </div>
 
-                            <li>
-                                If patient arouses to stronger physical stimuli (may be noxious) but never awakens to the
-                                point of responding yes/no or following commands,
-                                <div class="how-to-count score"> that’s a SAS 2. </div>
-                            </li>
-                            <li>
-                                Little or no response to noxious physical stimuli represents <div class="how-to-count score"> a SAS 1. </div>
-                            </li>
+                        <div class="tab-pane fade" id="pills-very-sedated" role="tabpanel" aria-labelledby="pills-very-sedated-tab">
+                          <div class="scoring-result">
+                              <h4 class="h3-sub-title">Very Sedated</h4>
+                              <p>
+                                Arouses to physical stimuli but does not communicate or follow commands, may move spontaneously  
+                              </p>
+                          </div>
+                        </div>
 
-                        </ol>
+                        <div class="tab-pane fade" id="pills-unarousable" role="tabpanel" aria-labelledby="pills-unarousable-tab">
+                          <div class="scoring-result">
+                              <h4 class="h3-sub-title">Unarousable</h4>
+                              <p>
+                                Minimal or no response to noxious stimuli, does not communicate or follow commands  
+                              </p>
+                          </div>
+                        </div>
+
+
+                      </div>
                     </div>
-
                 </div>
         </div>
     </div>
