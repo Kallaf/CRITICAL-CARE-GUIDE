@@ -3,15 +3,20 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'LOGO' });
+  res.render('index', { title: 'Home page' });
 });
 
 router.get('/deliriumScoring.html', function(req, res, next) {
-  res.render('deliriumScoring', { title: 'LOGO' });
+  res.render('deliriumScoring', { title: 'Delirium scoring' });
 });
 
 router.get('/agitationScoring.html', function(req, res, next) {
-  res.render('agitationScoring', { title: 'LOGO' });
+  res.render('agitationScoring', { title: 'Agitation scoring' });
+});
+
+
+router.get('/agitationManagement.html', function(req, res, next) {
+  res.render('agitationManagement', { title: 'Agitation management' });
 });
 
 module.exports = router;

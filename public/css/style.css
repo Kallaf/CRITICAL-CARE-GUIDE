@@ -150,3 +150,7 @@ body.scrollable {
 	justify-content: flex-start;
 }
 
+.underline{
+    text-decoration: underline;
+    display:inline;
+}

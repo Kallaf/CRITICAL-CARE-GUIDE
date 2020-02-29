@@ -1,0 +1,70 @@
+
+/* Cards */
+
+.container{
+    margin-bottom: 50px;
+}
+
+.card {
+    background:#FFF;
+    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 10px;
+    height: 100%;
+    padding:0px;
+    margin-top:1em;
+    overflow:hidden;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size:20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.row{
+    margin-bottom: 20px;
+}
+
+.card-header{
+    background-color:#a86632;
+    color:#FFFFFF;
+    padding:2%;
+    margin-top:0px;
+    overflow:hidden;
+    -webkit-transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-heading {
+    display: block;
+    text-align:center;
+    font-size: 35px;
+    line-height: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color:#fff;
+}
+
+.card ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+.card li {
+    padding-left: 1em;
+    text-indent: -1em;
+    margin:10px;
+}
+  
+.card li:before {
+    content: "-";
+    padding-right: 5px;
+}
+
+.card ol li:before {
+    content: none;
+}
