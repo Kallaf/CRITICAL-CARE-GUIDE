@@ -19,4 +19,10 @@ router.get('/agitationManagement.html', function(req, res, next) {
   res.render('agitationManagement', { title: 'Agitation management' });
 });
 
+
+
+router.get('/painManagement.html', function(req, res, next) {
+  res.render('painManagement', { title: 'Pain management' });
+});
+
 module.exports = router;
