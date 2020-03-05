@@ -25,4 +25,14 @@ router.get('/painManagement.html', function(req, res, next) {
   res.render('painManagement', { title: 'Pain management' });
 });
 
+
+router.get('/deliriumManagement.html', function(req, res, next) {
+  res.render('deliriumManagement', { title: 'Deliriumm anagement' });
+});
+
+router.get('/drugsCauseDelirium.html', function(req, res, next) {
+  res.render('drugsCauseDelirium', { title: 'Drugs cause delirium.' });
+});
+
+
 module.exports = router;
