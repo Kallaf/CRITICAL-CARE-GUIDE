@@ -34,5 +34,8 @@ router.get('/drugsCauseDelirium.html', function(req, res, next) {
   res.render('drugsCauseDelirium', { title: 'Drugs cause delirium.' });
 });
 
+router.get('/paralytics.html',function(req,res,next){
+  res.render('paralytics',{title: 'Paralytics'});
+});
 
 module.exports = router;
