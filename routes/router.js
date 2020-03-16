@@ -38,4 +38,8 @@ router.get('/paralytics.html',function(req,res,next){
   res.render('paralytics',{title: 'Paralytics'});
 });
 
+router.get('/painScoring.html',function(req,res,next){
+  res.render('painScoring',{title: 'Pain scoring'});
+});
+
 module.exports = router;

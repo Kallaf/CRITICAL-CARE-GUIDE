@@ -1,0 +1,169 @@
+<div style="margin-top: 40px;margin-left:5%;margin-right:5%;">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">Pain</li>
+            <li class="breadcrumb-item active" aria-current="page">Scoring</li>
+        </ol>
+    </nav>
+
+
+    <div class="mainContent">
+        <ul class="nav nav-tabs" id="agitationManagementTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="CPOT-tab" data-toggle="tab" href="#CPOT" role="tab" aria-controls="CPOT"
+                    aria-selected="true">CPOT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="BPS-tab" data-toggle="tab" href="#BPS" role="tab" aria-controls="BPS"
+                    aria-selected="false">BPS</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="agitationManagementTabContent">
+            <div class="tab-pane fade show active mainContent" id="CPOT" role="tabpanel" aria-labelledby="CPOT-tab">
+                <div class="mainContent" style="background-color: floralwhite;">
+
+                    <h2>CPOT</h2>
+                    <div style="font-family:Georgia, 'Times New Roman', Times, serif;font-size:20px;font-weight:600;">
+                        <p>&gesdot; The CPOT is designed to scale the pain of patterns who are unable to report it
+                            themselves
+                            through objective findings.
+                        </p>
+                        <p>&gesdot; The CPOT has good interrater reliability in multiple studies and high sensitivity
+                            when patients
+                            are in pain.
+                        </p>
+                    </div>
+
+                    <h2>Intubated?</h2>
+                    <button id="intubatedYes" type="button" class="btn btn-danger">yes</button>
+                    <button id="intubatedNo" type="button" class="btn btn-success">no</button>
+
+                    <div class="container-fluid" id="grad1">
+                        <div class="row justify-content-center mt-0">
+                            <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
+                                <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                                    <h1><strong>CPOT</strong></h1>
+                                    <p>Fill all form field to go to next step</p>
+                                    <div class="row">
+                                        <div class="col-md-12 mx-0">
+                                            <form id="msform">
+                                                
+                                                <fieldset>
+                                                    <div class="form-card">
+                                                        <h2 class="fs-title">Compliance with ventilator</h2>
+                                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                            <label class="btn btn-success active">
+                                                                <input type="radio" name="options" id="option1"
+                                                                    autocomplete="off" checked> Tolerating ventilator or
+                                                                movement
+                                                            </label>
+                                                            <label class="btn btn-warning">
+                                                                <input type="radio" name="options" id="option2"
+                                                                    autocomplete="off"> Coughing but tolerating
+                                                            </label>
+                                                            <label class="btn btn-danger">
+                                                                <input type="radio" name="options" id="option3"
+                                                                    autocomplete="off"> Fighting ventilator
+                                                            </label>
+                                                        </div>
+                                                    </div> <input type="button" name="next" class="next action-button"
+                                                        value="Next Step" />
+                                                </fieldset>
+                                                <fieldset>
+                                                    <div class="form-card">
+                                                        <h2 class="fs-title">Facial expression</h2>
+                                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                            <label class="btn btn-success active">
+                                                                <input type="radio" name="options" id="option1"
+                                                                    autocomplete="off" checked> Relaxed, neutral
+                                                            </label>
+                                                            <label class="btn btn-warning">
+                                                                <input type="radio" name="options" id="option2"
+                                                                    autocomplete="off"> Tense
+                                                            </label>
+                                                            <label class="btn btn-danger">
+                                                                <input type="radio" name="options" id="option3"
+                                                                    autocomplete="off"> Grimacing
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <input type="button" name="previous"
+                                                        class="previous action-button-previous" value="Previous" />
+                                                    <input type="button" name="next" class="next action-button"
+                                                        value="Next Step" />
+                                                </fieldset>
+                                                <fieldset>
+                                                    <div class="form-card">
+                                                        <h2 class="fs-title">Body movements</h2>
+                                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                            <label class="btn btn-success active">
+                                                                <input type="radio" name="options" id="option1"
+                                                                    autocomplete="off" checked> Absence of movements
+                                                            </label>
+                                                            <label class="btn btn-warning">
+                                                                <input type="radio" name="options" id="option2"
+                                                                    autocomplete="off"> Protection
+                                                            </label>
+                                                            <label class="btn btn-danger">
+                                                                <input type="radio" name="options" id="option3"
+                                                                    autocomplete="off"> Restlessness
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <input type="button" name="previous"
+                                                        class="previous action-button-previous" value="Previous" />
+                                                    <input type="button" name="next" class="next action-button"
+                                                        value="Next Step" />
+                                                </fieldset>
+                                                <fieldset>
+                                                    <div class="form-card">
+                                                        <h2 class="fs-title">Muscle tension</h2>
+                                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                            <label class="btn btn-success active">
+                                                                <input type="radio" name="options" id="option1"
+                                                                    autocomplete="off" checked> Relaxed
+                                                            </label>
+                                                            <label class="btn btn-warning">
+                                                                <input type="radio" name="options" id="option2"
+                                                                    autocomplete="off"> Tense, rigid
+                                                            </label>
+                                                            <label class="btn btn-danger">
+                                                                <input type="radio" name="options" id="option3"
+                                                                    autocomplete="off"> Very tense or rigid
+                                                            </label>
+                                                        </div>
+                                                    </div> <input type="button" name="previous"
+                                                        class="previous action-button-previous" value="Previous" />
+                                                    <input type="button" name="next"
+                                                        class="next painFinish action-button" value="Finish" />
+                                                </fieldset>
+                                                <fieldset>
+                                                    <div class="form-card">
+                                                        <div id="pain-result"></div>
+                                                    </div><input type="button" name="previous"
+                                                        class="previous action-button-previous" value="Previous" />
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="BPS" role="tabpanel" aria-labelledby="BPS-tab">
+                BPS
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+</div>
