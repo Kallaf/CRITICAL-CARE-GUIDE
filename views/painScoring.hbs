@@ -49,25 +49,38 @@
                                     <div class="row">
                                         <div class="col-md-12 mx-0">
                                             <form id="msform">
-                                                
+
                                                 <fieldset>
-                                                    <div class="form-card">
-                                                        <h2 class="fs-title">Compliance with ventilator</h2>
-                                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                                            <label class="btn btn-success active">
-                                                                <input type="radio" name="options" id="option1"
-                                                                    autocomplete="off" checked> Tolerating ventilator or
-                                                                movement
-                                                            </label>
-                                                            <label class="btn btn-warning">
-                                                                <input type="radio" name="options" id="option2"
-                                                                    autocomplete="off"> Coughing but tolerating
-                                                            </label>
-                                                            <label class="btn btn-danger">
-                                                                <input type="radio" name="options" id="option3"
-                                                                    autocomplete="off"> Fighting ventilator
-                                                            </label>
+                                                    <div id="intubatedContent" class="form-card">
+                                                        <h2 class="fs-title">
+                                                            <p id="intubatedAnsTitle">
+                                                                Compliance with ventilator
+                                                            </p>
+                                                        </h2>
+
+                                                        <div class="custom-control custom-radio custom-control">
+                                                            <input type="radio" class="custom-control-input"
+                                                                id="pain-question1-ans1" name="pain-question1"
+                                                                value="yes" checked>
+                                                            <label class="custom-control-label" for="pain-question1-ans1"
+                                                                style="color:#5cb85c;">Tolerating ventilator or
+                                                                movement</label>
                                                         </div>
+
+                                                        <div class="custom-control custom-radio custom-control">
+                                                            <input type="radio" class="custom-control-input"
+                                                                id="pain-question1-ans2" name="pain-question1" value="no">
+                                                            <label class="custom-control-label" for="pain-question1-ans2"
+                                                                style="color:#f0ad4e;">Coughing but tolerating</label>
+                                                        </div>
+
+                                                        <div class="custom-control custom-radio custom-control">
+                                                            <input type="radio" class="custom-control-input"
+                                                                id="pain-question1-ans3" name="pain-question1" value="no">
+                                                            <label class="custom-control-label" for="pain-question1-ans3"
+                                                                style="color:#d9534f;">Fighting ventilator</label>
+                                                        </div>
+
                                                     </div> <input type="button" name="next" class="next action-button"
                                                         value="Next Step" />
                                                 </fieldset>
