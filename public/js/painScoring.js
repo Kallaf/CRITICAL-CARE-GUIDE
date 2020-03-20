@@ -2,6 +2,47 @@ $(document).ready(function () {
 
     var current_fs, next_fs, previous_fs; //fieldsets
     var opacity;
+    var noPain = '<h2 class="fs-title text-center">NO PAIN</h2> <br><br>' +
+        '<div class="row justify-content-center">' +
+        '<div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image"> </div>' +
+        '</div> <br><br>' +
+        '<div class="row justify-content-center">' +
+        '<div class="col-7 text-center">' +
+        '<h5>Re-evaluate soon in future</h5>' +
+        '</div>' +
+        '</div>';
+
+    var mildPain = '<h2 class="fs-title text-center">MILD PAIN</h2> <br><br>' +
+        '<div class="row justify-content-center">' +
+        '<div class="col-3"> <img src="/img/icons8-low-risk-160.png" class="fit-image"> </div>' +
+        '</div> <br><br>' +
+        '<div class="row justify-content-center">' +
+        '<div class="col-7 text-center">' +
+        '<h5>Re-evaluate soon in future</h5>' +
+        '</div>' +
+        '</div>';
+
+    var unacceptablePain = '<h2 class="fs-title text-center">UNACCEPTABLE AMOUNT OF PAIN</h2> <br><br>' +
+        '<div class="row justify-content-center">' +
+        '<div class="col-3"> <img src="/img/icons8-medium-risk-160.png" class="fit-image"> </div>' +
+        '</div> <br><br>' +
+        '<div class="row justify-content-center">' +
+        '<div class="col-7 text-center">' +
+        '<h5>Consider further sedation or other analgesia</h5>' +
+        '</div>' +
+        '</div>';
+
+
+    var maxPain = '<h2 class="fs-title text-center">MAXIMUM PAIN</h2> <br><br>' +
+        '<div class="row justify-content-center">' +
+        '<div class="col-3"> <img src="/img/icons8-high-risk-160.png" class="fit-image"> </div>' +
+        '</div> <br><br>' +
+        '<div class="row justify-content-center">' +
+        '<div class="col-7 text-center">' +
+        '<h5>Consider further sedation or other analgesia</h5>' +
+        '</div>' +
+        '</div>';
+
 
     function renderIntubatedContent(title, option1, option2, option3) {
 
@@ -13,7 +54,7 @@ $(document).ready(function () {
             + '<div class="custom-control custom-radio custom-control">'
             + '<input type="radio" class="custom-control-input"'
             + 'id="pain-question1-ans1" name="pain-question1"'
-            + '  value="yes" checked>'
+            + '  value="0" checked>'
             + '<label class="custom-control-label" for="pain-question1-ans1"'
             + 'style="color:#5cb85c;">'
             + option1
@@ -21,7 +62,7 @@ $(document).ready(function () {
             + '</div>'
             + '<div class="custom-control custom-radio custom-control">'
             + '    <input type="radio" class="custom-control-input"'
-            + '        id="pain-question1-ans2" name="pain-question1" value="no">'
+            + '        id="pain-question1-ans2" name="pain-question1" value="1">'
             + '    <label class="custom-control-label" for="pain-question1-ans2"'
             + '        style="color:#f0ad4e;">'
             + option2
@@ -29,7 +70,7 @@ $(document).ready(function () {
             + '</div>'
             + '<div class="custom-control custom-radio custom-control">'
             + '    <input type="radio" class="custom-control-input"'
-            + '        id="pain-question1-ans3" name="pain-question1" value="no">'
+            + '        id="pain-question1-ans3" name="pain-question1" value="2">'
             + '    <label class="custom-control-label" for="pain-question1-ans3"'
             + '        style="color:#d9534f;">'
             + option3
@@ -119,67 +160,46 @@ $(document).ready(function () {
     })
 
     $(".painFinish").click(function () {
-        var painPresent = '<h2 class="fs-title text-center">Criteria met!</h2> <br><br>' +
-            '<div class="row justify-content-center">' +
-            '<div class="col-3"> <img src="/img/orange-warning-icon-3.png" class="fit-image"> </div>' +
-            '</div> <br><br>' +
-            '<div class="row justify-content-center">' +
-            '<div class="col-7 text-center">' +
-            '<h5>CAM-ICU positive - pain present</h5>' +
-            '</div>' +
-            '</div>';
+        document.getElementById("pain-result").innerHTML = noPain;
 
-        var nopain = '<h2 class="fs-title text-center">Criteria not met!</h2> <br><br>' +
-            '<div class="row justify-content-center">' +
-            '<div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image"> </div>' +
-            '</div> <br><br>' +
-            '<div class="row justify-content-center">' +
-            '<div class="col-7 text-center">' +
-            '<h5>CAM ICU negative - No pain</h5>' +
-            '</div>' +
-            '</div>';
-
-        document.getElementById("pain-result").innerHTML = nopain;
-
-        var condition1 = false, condition2 = false, condition3 = false;
-
-        var painAns1_1 = document.getElementsByName('pain-question1_1');
-        var painAns1_2 = document.getElementsByName('pain-question1_2');
-        var painNoOfErrors1 = document.getElementById('pain-no-of-errors1');
-        var painNoOfErrors2 = document.getElementById('pain-no-of-errors2');
-        var actualRassScore = document.getElementById('actual-rass-score');
-
-        for (i = 0; i < painAns1_1.length; i++)
-            if (painAns1_1[i].checked)
-                condition1 = (painAns1_1[i].value === "yes");
-
-        for (i = 0; i < painAns1_2.length; i++)
-            if (painAns1_2[i].checked)
-                condition1 = condition1 || painAns1_2[i].value === "yes";
-
-        condition2 = painNoOfErrors1.value > 2;
-        condition3 = actualRassScore.value != 0 || painNoOfErrors2.value > 1;
-
-        if (condition1 && condition2 && condition3)
-            document.getElementById("pain-result").innerHTML = painPresent;
+        var questions = []
+        questions.push(document.getElementsByName('pain-question1'));
+        questions.push(document.getElementsByName('pain-question2'));
+        questions.push(document.getElementsByName('pain-question3'));
+        questions.push(document.getElementsByName('pain-question4'));
+        var score = 0;
+        questions.forEach(question => {
+            question.forEach(answer => {
+                if (answer.checked)
+                    score += parseInt(answer.value, 10);
+            });
+        });
+        if (score > 2)
+            document.getElementById("pain-result").innerHTML = unacceptablePain;
 
     });
 
-    $("#pain-no-of-errors1-result b").html($("#pain-no-of-errors1").val());
-    // Read value on change
-    $("#pain-no-of-errors1").change(function () {
-        $("#pain-no-of-errors1-result b").html($(this).val());
+    $(".pain2Finish").click(function () {
+        document.getElementById("pain2-result").innerHTML = noPain;
+
+        var questions = []
+        questions.push(document.getElementsByName('pain2-question1'));
+        questions.push(document.getElementsByName('pain2-question2'));
+        questions.push(document.getElementsByName('pain2-question3'));
+        var score = 0;
+        questions.forEach(question => {
+            question.forEach(answer => {
+                if (answer.checked)
+                    score += parseInt(answer.value, 10);
+            });
+        });
+        if (score === 12)
+            document.getElementById("pain2-result").innerHTML = maxPain;
+        else if (score > 5)
+            document.getElementById("pain2-result").innerHTML = unacceptablePain;
+        else if (score > 3)
+            document.getElementById("pain2-result").innerHTML = mildPain;
+
     });
 
-    $("#pain-no-of-errors2-result b").html($("#pain-no-of-errors2").val());
-    // Read value on change
-    $("#pain-no-of-errors2").change(function () {
-        $("#pain-no-of-errors2-result b").html($(this).val());
-    });
-
-    $("#actual-rass-score-result b").html($("#actual-rass-score").val());
-    // Read value on change
-    $("#actual-rass-score").change(function () {
-        $("#actual-rass-score-result b").html($(this).val());
-    });
 });
