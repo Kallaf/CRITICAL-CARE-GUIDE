@@ -2,98 +2,93 @@ $(document).ready(function () {
 
     var current_fs, next_fs, previous_fs; //fieldsets
     var opacity;
-    var noPain = '<h2 class="fs-title text-center">NO PAIN</h2> <br><br>' +
+
+    
+    function calculateScore(questions)
+    {
+        var score = 0;
+        questions.forEach(question => {
+            question.forEach(answer => {
+                if (answer.checked)
+                    score += parseInt(answer.value, 10);
+            });
+        });
+        return score;
+    }
+
+    function getQuestions(title,size)
+    {
+        var questions = []
+        for(let i=1;i<=size;i++)
+            questions.push(document.getElementsByName(title+i.toString(10)));
+        return questions;
+    }
+
+    function renderResult(title,rimg,message)
+    {
+        return '<h2 class="fs-title text-center">'+title+'</h2> <br><br>' +
         '<div class="row justify-content-center">' +
-        '<div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image"> </div>' +
+        '<div class="col-6"> <img src='+rimg+' class="fit-image"> </div>' +
         '</div> <br><br>' +
         '<div class="row justify-content-center">' +
         '<div class="col-7 text-center">' +
-        '<h5>Re-evaluate soon in future</h5>' +
+        '<h5>'+message+'</h5>' +
         '</div>' +
         '</div>';
+    }
 
-    var mildPain = '<h2 class="fs-title text-center">MILD PAIN</h2> <br><br>' +
-        '<div class="row justify-content-center">' +
-        '<div class="col-3"> <img src="/img/icons8-low-risk-160.png" class="fit-image"> </div>' +
-        '</div> <br><br>' +
-        '<div class="row justify-content-center">' +
-        '<div class="col-7 text-center">' +
-        '<h5>Re-evaluate soon in future</h5>' +
-        '</div>' +
-        '</div>';
+    function getNoPain(title)
+    {
+        return renderResult(title,"https://img.icons8.com/color/96/000000/ok--v2.png","no pain re-evaluate soon in future")
+    }
 
-    var unacceptablePain = '<h2 class="fs-title text-center">UNACCEPTABLE AMOUNT OF PAIN</h2> <br><br>' +
-        '<div class="row justify-content-center">' +
-        '<div class="col-3"> <img src="/img/icons8-medium-risk-160.png" class="fit-image"> </div>' +
-        '</div> <br><br>' +
-        '<div class="row justify-content-center">' +
-        '<div class="col-7 text-center">' +
-        '<h5>Consider further sedation or other analgesia</h5>' +
-        '</div>' +
-        '</div>';
+    function getMildPain(title)
+    {
+        return renderResult(title,"/img/icons8-low-risk-160.png","mild pain re-evaluate soon in future")
+    }
 
+    function getUnacceptablePain(title)
+    {
+        return renderResult(title,"/img/icons8-medium-risk-160.png","unacceptable amount of pain consider further sedation or other analgesia")
+    }
 
-    var maxPain = '<h2 class="fs-title text-center">MAXIMUM PAIN</h2> <br><br>' +
-        '<div class="row justify-content-center">' +
-        '<div class="col-3"> <img src="/img/icons8-high-risk-160.png" class="fit-image"> </div>' +
-        '</div> <br><br>' +
-        '<div class="row justify-content-center">' +
-        '<div class="col-7 text-center">' +
-        '<h5>Consider further sedation or other analgesia</h5>' +
-        '</div>' +
-        '</div>';
-
+    function getMaxPain(title)
+    {
+        return renderResult(title,"/img/icons8-high-risk-160.png","maximum pain consider further sedation or other analgesia")
+    }
 
     function renderIntubatedContent(title, option1, option2, option3) {
-
-        var intubatedContent = '<h2 class="fs-title">'
-            + '<p id="intubatedAnsTitle">'
-            + title
-            + '</p>'
-            + '</h2>'
-            + '<div class="custom-control custom-radio custom-control">'
-            + '<input type="radio" class="custom-control-input"'
-            + 'id="pain-question1-ans1" name="pain-question1"'
-            + '  value="0" checked>'
-            + '<label class="custom-control-label" for="pain-question1-ans1"'
-            + 'style="color:#5cb85c;">'
-            + option1
-            + '</label>'
-            + '</div>'
-            + '<div class="custom-control custom-radio custom-control">'
-            + '    <input type="radio" class="custom-control-input"'
-            + '        id="pain-question1-ans2" name="pain-question1" value="1">'
-            + '    <label class="custom-control-label" for="pain-question1-ans2"'
-            + '        style="color:#f0ad4e;">'
-            + option2
-            + '</label>'
-            + '</div>'
-            + '<div class="custom-control custom-radio custom-control">'
-            + '    <input type="radio" class="custom-control-input"'
-            + '        id="pain-question1-ans3" name="pain-question1" value="2">'
-            + '    <label class="custom-control-label" for="pain-question1-ans3"'
-            + '        style="color:#d9534f;">'
-            + option3
-            + '</label>'
-            + '</div>';
-
-        document.getElementById("intubatedContent").innerHTML = intubatedContent;
+        document.getElementById("intubatedAnsTitle").innerHTML = title;
+        document.getElementById("intubatedAnsOption1").innerHTML = option1;
+        document.getElementById("intubatedAnsOption2").innerHTML = option2;
+        document.getElementById("intubatedAnsOption3").innerHTML = option3;
     }
+
+    
+    $(".update-score").click(function () {
+        var score = calculateScore(getQuestions('pain-question',4));
+        $(".current-score b").html(score);
+    });
+
+    $(".update-score2").click(function () {
+        var score = calculateScore(getQuestions('pain2-question',3));
+        $(".current-score2 b").html(score);
+    });
 
     $("#intubatedYes").click(function () {
         renderIntubatedContent('Compliance with ventilator',
-            'Tolerating ventilator or movement',
-            'Coughing but tolerating',
-            'Fighting ventilator'
+            '0 Tolerating ventilator or movement',
+            '+1 Coughing but tolerating',
+            '+2 Fighting ventilator'
         );
     });
 
 
     $("#intubatedNo").click(function () {
         renderIntubatedContent('Vocalization',
-            'Talking in normal tone or no sound',
-            'Sighing, moaning',
-            'Crying out, sobbing'
+            '0  Talking in normal tone or no sound',
+            '+1 Sighing, moaning',
+            '+2 Crying out, sobbing'
         );
     });
 
@@ -160,45 +155,24 @@ $(document).ready(function () {
     })
 
     $(".painFinish").click(function () {
-        document.getElementById("pain-result").innerHTML = noPain;
-
-        var questions = []
-        questions.push(document.getElementsByName('pain-question1'));
-        questions.push(document.getElementsByName('pain-question2'));
-        questions.push(document.getElementsByName('pain-question3'));
-        questions.push(document.getElementsByName('pain-question4'));
-        var score = 0;
-        questions.forEach(question => {
-            question.forEach(answer => {
-                if (answer.checked)
-                    score += parseInt(answer.value, 10);
-            });
-        });
+        var score = calculateScore(getQuestions('pain-question',4));
         if (score > 2)
-            document.getElementById("pain-result").innerHTML = unacceptablePain;
+            document.getElementById("pain-result").innerHTML = getUnacceptablePain("2 &lt score");
+        else
+            document.getElementById("pain-result").innerHTML = getNoPain("score &le; 2");
 
     });
 
     $(".pain2Finish").click(function () {
-        document.getElementById("pain2-result").innerHTML = noPain;
-
-        var questions = []
-        questions.push(document.getElementsByName('pain2-question1'));
-        questions.push(document.getElementsByName('pain2-question2'));
-        questions.push(document.getElementsByName('pain2-question3'));
-        var score = 0;
-        questions.forEach(question => {
-            question.forEach(answer => {
-                if (answer.checked)
-                    score += parseInt(answer.value, 10);
-            });
-        });
+        var score = calculateScore(getQuestions('pain2-question',3));
         if (score === 12)
-            document.getElementById("pain2-result").innerHTML = maxPain;
+            document.getElementById("pain2-result").innerHTML = getMaxPain("score = 12");
         else if (score > 5)
-            document.getElementById("pain2-result").innerHTML = unacceptablePain;
+            document.getElementById("pain2-result").innerHTML = getUnacceptablePain("6 &le; score &le; 11");
         else if (score > 3)
-            document.getElementById("pain2-result").innerHTML = mildPain;
+            document.getElementById("pain2-result").innerHTML = getMildPain("4 &le; score &lt; 6");
+        else
+            document.getElementById("pain2-result").innerHTML = getNoPain("0 &le; score &le; 3");
 
     });
 

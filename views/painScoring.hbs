@@ -24,7 +24,7 @@
             <div class="tab-pane fade show active mainContent" id="CPOT" role="tabpanel" aria-labelledby="CPOT-tab">
                 <div class="mainContent" style="background-color: floralwhite;">
 
-                    <h2>CPOT</h2>
+                    <h2>Care Pain Observation Tool</h2>
                     <div style="font-family:Georgia, 'Times New Roman', Times, serif;font-size:20px;font-weight:600;">
                         <p>&gesdot; The CPOT is designed to scale the pain of patterns who are unable to report it
                             themselves
@@ -59,33 +59,36 @@
                                                         </h2>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score"
                                                                 id="pain-question1-ans1" name="pain-question1" value="0"
                                                                 checked>
                                                             <label class="custom-control-label"
                                                                 for="pain-question1-ans1"
-                                                                style="color:#5cb85c;">Tolerating ventilator or
+                                                                style="color:#5cb85c;"
+                                                                id="intubatedAnsOption1">0  Tolerating ventilator or
                                                                 movement</label>
                                                         </div>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score"
                                                                 id="pain-question1-ans2" name="pain-question1"
                                                                 value="1">
                                                             <label class="custom-control-label"
                                                                 for="pain-question1-ans2"
-                                                                style="color:#f0ad4e;">Coughing but tolerating</label>
+                                                                style="color:#f0ad4e;"
+                                                                id="intubatedAnsOption2">+1 Coughing but tolerating</label>
                                                         </div>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score"
                                                                 id="pain-question1-ans3" name="pain-question1"
                                                                 value="2">
                                                             <label class="custom-control-label"
                                                                 for="pain-question1-ans3"
-                                                                style="color:#d9534f;">Fighting ventilator</label>
+                                                                style="color:#d9534f;"
+                                                                id="intubatedAnsOption3">+2 Fighting ventilator</label>
                                                         </div>
-
+                                                        <div class="current-score">Score <b>0</b></div>
                                                     </div> <input type="button" name="next" class="next action-button"
                                                         value="Next Step" />
                                                 </fieldset>
@@ -94,31 +97,32 @@
                                                         <h2 class="fs-title">Facial expression</h2>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score"
                                                                 id="pain-question2-ans1" name="pain-question2" value="0"
                                                                 checked>
                                                             <label class="custom-control-label"
                                                                 for="pain-question2-ans1"
-                                                                style="color:#5cb85c;">Relaxed, neutral</label>
+                                                                style="color:#5cb85c;">0  Relaxed, neutral</label>
                                                         </div>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score"
                                                                 id="pain-question2-ans2" name="pain-question2"
                                                                 value="1">
                                                             <label class="custom-control-label"
                                                                 for="pain-question2-ans2"
-                                                                style="color:#f0ad4e;">Tense</label>
+                                                                style="color:#f0ad4e;">+1 Tense</label>
                                                         </div>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score"
                                                                 id="pain-question2-ans3" name="pain-question2"
                                                                 value="2">
                                                             <label class="custom-control-label"
                                                                 for="pain-question2-ans3"
-                                                                style="color:#d9534f;">Grimacing</label>
+                                                                style="color:#d9534f;">+2 Grimacing</label>
                                                         </div>
+                                                        <div class="current-score">Score <b>0</b></div>
                                                     </div>
                                                     <input type="button" name="previous"
                                                         class="previous action-button-previous" value="Previous" />
@@ -129,31 +133,32 @@
                                                     <div class="form-card">
                                                         <h2 class="fs-title">Body movements</h2>
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score"
                                                                 id="pain-question3-ans1" name="pain-question3" value="0"
                                                                 checked>
                                                             <label class="custom-control-label"
-                                                                for="pain-question3-ans1" style="color:#5cb85c;">Absence
+                                                                for="pain-question3-ans1" style="color:#5cb85c;">0  Absence
                                                                 of movements</label>
                                                         </div>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score"
                                                                 id="pain-question3-ans2" name="pain-question3"
                                                                 value="1">
                                                             <label class="custom-control-label"
                                                                 for="pain-question3-ans2"
-                                                                style="color:#f0ad4e;">Protection</label>
+                                                                style="color:#f0ad4e;">+1 Protection</label>
                                                         </div>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score"
                                                                 id="pain-question3-ans3" name="pain-question3"
                                                                 value="2">
                                                             <label class="custom-control-label"
                                                                 for="pain-question3-ans3"
-                                                                style="color:#d9534f;">Restlessness</label>
+                                                                style="color:#d9534f;">+2 Restlessness</label>
                                                         </div>
+                                                        <div class="current-score">Score <b>0</b></div>
                                                     </div>
                                                     <input type="button" name="previous"
                                                         class="previous action-button-previous" value="Previous" />
@@ -164,31 +169,32 @@
                                                     <div class="form-card">
                                                         <h2 class="fs-title">Muscle tension</h2>
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score"
                                                                 id="pain-question4-ans1" name="pain-question4" value="0"
                                                                 checked>
                                                             <label class="custom-control-label"
                                                                 for="pain-question4-ans1"
-                                                                style="color:#5cb85c;">Relaxed</label>
+                                                                style="color:#5cb85c;">0 Relaxed</label>
                                                         </div>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score"
                                                                 id="pain-question4-ans2" name="pain-question4"
                                                                 value="1">
                                                             <label class="custom-control-label"
-                                                                for="pain-question4-ans2" style="color:#f0ad4e;">Tense,
+                                                                for="pain-question4-ans2" style="color:#f0ad4e;">+1 Tense,
                                                                 rigid</label>
                                                         </div>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score"
                                                                 id="pain-question4-ans3" name="pain-question4"
                                                                 value="2">
                                                             <label class="custom-control-label"
-                                                                for="pain-question4-ans3" style="color:#d9534f;">Very
+                                                                for="pain-question4-ans3" style="color:#d9534f;">+2 Very
                                                                 tense or rigid</label>
                                                         </div>
+                                                        <div class="current-score">Score <b>0</b></div>
                                                     </div> <input type="button" name="previous"
                                                         class="previous action-button-previous" value="Previous" />
                                                     <input type="button" name="next"
@@ -212,7 +218,7 @@
             <div class="tab-pane fade" id="BPS" role="tabpanel" aria-labelledby="BPS-tab">
                 <div class="mainContent" style="background-color: floralwhite;">
 
-                    <h2>BPS</h2>
+                    <h2>Behaviral Pain Scale</h2>
                     <div class="container-fluid" id="grad1">
                         <div class="row justify-content-center mt-0">
                             <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
@@ -223,50 +229,50 @@
                                         <div class="col-md-12 mx-0">
                                             <form id="msform">
                                                 <fieldset>
-                                                    <div id="intubatedContent" class="form-card">
+                                                    <div class="form-card">
                                                         <h2 class="fs-title">
-                                                            <p id="intubatedAnsTitle">
+                                                            <p>
                                                                 Facial expression
                                                             </p>
                                                         </h2>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score2"
                                                                 id="pain2-question1-ans1" name="pain2-question1"
                                                                 value="1" checked>
                                                             <label class="custom-control-label"
                                                                 for="pain2-question1-ans1"
-                                                                style="color:#5cb85c;">Relaxed</label>
+                                                                style="color:#5cb85c;">+1 Relaxed</label>
                                                         </div>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score2"
                                                                 id="pain2-question1-ans2" name="pain2-question1"
                                                                 value="2">
                                                             <label class="custom-control-label"
                                                                 for="pain2-question1-ans2"
-                                                                style="color:#f0ad4e;">Partially tightened (e.g., brow
+                                                                style="color:#f0ad4e;">+2 Partially tightened (e.g., brow
                                                                 lowering)</label>
                                                         </div>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score2"
                                                                 id="pain2-question1-ans3" name="pain2-question1"
                                                                 value="3">
                                                             <label class="custom-control-label"
-                                                                for="pain2-question1-ans3" style="color:#d9534f;">Fully
+                                                                for="pain2-question1-ans3" style="color:#d9534f;">+3 Fully
                                                                 tightened (e.g., eyelid closing)</label>
                                                         </div>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score2"
                                                                 id="pain2-question1-ans4" name="pain2-question1"
                                                                 value="4">
                                                             <label class="custom-control-label"
                                                                 for="pain2-question1-ans4"
-                                                                style="color:#ff160e;">Grimacing</label>
+                                                                style="color:#ff160e;">+4 Grimacing</label>
                                                         </div>
-
+                                                        <div class="current-score2">Score <b>3</b></div>
                                                     </div> <input type="button" name="next" class="next action-button"
                                                         value="Next Step" />
                                                 </fieldset>
@@ -275,40 +281,41 @@
                                                         <h2 class="fs-title">Upper limb movements</h2>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score2"
                                                                 id="pain2-question2-ans1" name="pain2-question2"
                                                                 value="1" checked>
                                                             <label class="custom-control-label"
-                                                                for="pain2-question2-ans1" style="color:#5cb85c;">No
+                                                                for="pain2-question2-ans1" style="color:#5cb85c;">+1 No
                                                                 movement</label>
                                                         </div>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score2"
                                                                 id="pain2-question2-ans2" name="pain2-question2"
                                                                 value="2">
                                                             <label class="custom-control-label"
                                                                 for="pain2-question2-ans2"
-                                                                style="color:#f0ad4e;">Partially bent</label>
+                                                                style="color:#f0ad4e;">+2 Partially bent</label>
                                                         </div>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score2"
                                                                 id="pain2-question2-ans3" name="pain2-question2"
                                                                 value="3">
                                                             <label class="custom-control-label"
-                                                                for="pain2-question2-ans3" style="color:#d9534f;">Fully
+                                                                for="pain2-question2-ans3" style="color:#d9534f;">+3 Fully
                                                                 bent with finger flexion</label>
                                                         </div>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score2"
                                                                 id="pain2-question2-ans4" name="pain2-question2"
                                                                 value="4">
                                                             <label class="custom-control-label"
                                                                 for="pain2-question2-ans4"
-                                                                style="color:#ff160e;">Permanently retracted</label>
+                                                                style="color:#ff160e;">+4 Permanently retracted</label>
                                                         </div>
+                                                        <div class="current-score2">Score <b>3</b></div>
                                                     </div>
                                                     <input type="button" name="previous"
                                                         class="previous action-button-previous" value="Previous" />
@@ -319,41 +326,42 @@
                                                     <div class="form-card">
                                                         <h2 class="fs-title">Compliance with mechanical ventilation</h2>
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score2"
                                                                 id="pain2-question3-ans1" name="pain2-question3"
                                                                 value="1" checked>
                                                             <label class="custom-control-label"
                                                                 for="pain2-question3-ans1"
-                                                                style="color:#5cb85c;">Tolerating movement</label>
+                                                                style="color:#5cb85c;">+1 Tolerating movement</label>
                                                         </div>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score2"
                                                                 id="pain2-question3-ans2" name="pain2-question3"
                                                                 value="2">
                                                             <label class="custom-control-label"
                                                                 for="pain2-question3-ans2"
-                                                                style="color:#f0ad4e;">Coughing but tolerating
+                                                                style="color:#f0ad4e;">+2 Coughing but tolerating
                                                                 ventilation for most of the time</label>
                                                         </div>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score2"
                                                                 id="pain2-question3-ans3" name="pain2-question3"
                                                                 value="3">
                                                             <label class="custom-control-label"
                                                                 for="pain2-question3-ans3"
-                                                                style="color:#d9534f;">Fighting ventilator</label>
+                                                                style="color:#d9534f;">+3 Fighting ventilator</label>
                                                         </div>
 
                                                         <div class="custom-control custom-radio custom-control">
-                                                            <input type="radio" class="custom-control-input"
+                                                            <input type="radio" class="custom-control-input update-score2"
                                                                 id="pain2-question3-ans4" name="pain2-question3"
                                                                 value="4">
                                                             <label class="custom-control-label"
-                                                                for="pain2-question3-ans4" style="color:#ff160e;">Unable
+                                                                for="pain2-question3-ans4" style="color:#ff160e;">+4 Unable
                                                                 to control ventilation</label>
                                                         </div>
+                                                        <div class="current-score2">Score <b>3</b></div>
                                                     </div>
                                                     <input type="button" name="previous"
                                                         class="previous action-button-previous" value="Previous" />
