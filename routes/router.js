@@ -42,4 +42,9 @@ router.get('/painScoring.html',function(req,res,next){
   res.render('painScoring',{title: 'Pain scoring'});
 });
 
+
+router.get('/painCaution.html',function(req,res,next){
+  res.render('painCaution',{title: 'Pain Cautions'});
+});
+
 module.exports = router;
