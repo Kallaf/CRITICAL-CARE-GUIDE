@@ -96,7 +96,7 @@ $(document).ready(function () {
         if (cerebrovascular) {
             instructions.add("Use of ketorolac is contraindicated");
             instructions.add("Use of ketamine is contraindicated");
-            instructions.add("Use of Morphine sulfate is contraindicated");
+            instructions.add("Use of morphine sulfate is contraindicated");
         }
 
         if (highRisk) {
@@ -106,11 +106,6 @@ $(document).ready(function () {
 
         if (brainTumor)
             instructions.add("Morphine sulfate is contraindicat");
-
-        if (paralyticIleus) {
-            instructions.add("Use of fentanyl is contraindicated");
-            instructions.add("Use of morphine sulfate is contraindicated");
-        }
 
         if (paralyticIleus) {
             instructions.add("Use of fentanyl is contraindicated");
@@ -145,10 +140,13 @@ $(document).ready(function () {
             instructions.add("Use ketamine with caution");
 
         if (hypothyroidism)
-            instructions.add("Hypothyroidismuse of morphine sulfate is contraindicated");
+            instructions.add("Use of morphine sulfate is contraindicated");
 
         if (postoperative)
             instructions.add("Use of fentanyl is contraindicated");
+
+        if(benzodiazepines)
+            instructions.add("Use of morphine sulfate is contraindicated");
 
         var res = "";
         if (instructions.size === 0)
