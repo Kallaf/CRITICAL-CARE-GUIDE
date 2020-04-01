@@ -52,6 +52,7 @@ $(document).ready(function () {
                 instructions.add("Morphine sulfate: Reduce dose by 25");
                 instructions.add("<b>GFR&lt;30ml/min:</b> Acetaminophen is used with reduced dosing and prolonged intervals");
                 instructions.add("<b>GFR&gt;20ml/min:</b> Meloxicam is used with No dosage adjustment needed");
+                instructions.add("GFR 20 mL / minute or less: Meloxicam is not recommended");
             }
             else {
                 instructions.add("Acetaminophen: administer at a minimum interval of every 8 hours.");

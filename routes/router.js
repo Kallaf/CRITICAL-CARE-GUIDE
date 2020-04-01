@@ -47,4 +47,22 @@ router.get('/painCaution.html',function(req,res,next){
   res.render('painCaution',{title: 'Pain Cautions'});
 });
 
+router.get('/precipitatingfactors.html',function(req,res,next){
+  res.render('precipitatingfactors.hbs',{title: 'Precipitating factors'});
+});
+
+router.get('/painprecipitatingfactors.html',function(req,res,next){
+  res.render('painprecipitatingfactors.hbs',{title: 'Precipitating factors for pain'});
+});
+
+
+router.get('/agitationprecipitatingfactors.html',function(req,res,next){
+  res.render('agitationprecipitatingfactors.hbs',{title: 'Precipitating factors for agitation'});
+});
+
+
+router.get('/deliriumprecipitatingfactors.html',function(req,res,next){
+  res.render('deliriumprecipitatingfactors.hbs',{title: 'Precipitating factors for delirium'});
+});
+
 module.exports = router;
