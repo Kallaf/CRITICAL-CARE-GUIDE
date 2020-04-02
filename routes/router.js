@@ -6,6 +6,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Home page' });
 });
 
+router.get('/index.html', function(req, res, next) {
+  res.render('index', { title: 'Home page' });
+});
+
 router.get('/deliriumScoring.html', function(req, res, next) {
   res.render('deliriumScoring', { title: 'Delirium scoring' });
 });
