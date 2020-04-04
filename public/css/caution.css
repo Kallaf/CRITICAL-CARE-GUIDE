@@ -7,7 +7,7 @@
     width:100%;
   }
   
-  td{
+  .checklist-holder td{
     border-bottom:1px solid #f6f6f6;
     padding:5px 10px;
     text-align: left;
@@ -15,12 +15,12 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
   
-  td:nth-child(2){
+  .checklist-holder td:nth-child(2){
     text-align: center;
     width: 40px;
   }
   
-  tr:first-child td{
+  .checklist-holder tr:first-child td{
     font-size: 30px;
     color:steelblue;
   }

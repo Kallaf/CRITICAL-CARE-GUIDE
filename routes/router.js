@@ -51,6 +51,11 @@ router.get('/painCaution.html',function(req,res,next){
   res.render('painCaution',{title: 'Pain Cautions'});
 });
 
+
+router.get('/deliriumCaution.html',function(req,res,next){
+  res.render('deliriumCaution',{title: 'Delirium cautions'});
+});
+
 router.get('/precipitatingfactors.html',function(req,res,next){
   res.render('precipitatingfactors.hbs',{title: 'Precipitating factors'});
 });
