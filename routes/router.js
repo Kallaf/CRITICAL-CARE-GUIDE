@@ -34,8 +34,8 @@ router.get('/deliriumManagement.html', function(req, res, next) {
   res.render('deliriumManagement', { title: 'Deliriumm anagement' });
 });
 
-router.get('/drugsCauseDelirium.html', function(req, res, next) {
-  res.render('drugsCauseDelirium', { title: 'Drugs cause delirium.' });
+router.get('/criteriaParalytics.html', function(req, res, next) {
+  res.render('criteriaParalytics', { title: 'Criteria for the use of paralytics in ICU patients' });
 });
 
 router.get('/paralytics.html',function(req,res,next){
