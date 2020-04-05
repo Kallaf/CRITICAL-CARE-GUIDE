@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    var redList = ["Contraindicated", "Avoid use"];
+
     function noChecks() {
         for (let i = 1; i <= 15; i++)
             if (document.getElementById('delirium-caution-check' + i.toString()).checked)
@@ -34,24 +36,18 @@ $(document).ready(function () {
     }
 
     function addRows(drugName, drug) {
-        if (drug.get("Contraindicated").length > 0)
-            return addRow(
-                drugName,
-                "Contraindicated",
-                drug.get("Contraindicated"),
-                true,
-                1,
-                true
-            );
-        if (drug.get("Avoid use").length > 0)
-            return addRow(
-                drugName,
-                "Avoid use",
-                drug.get("Avoid use"),
-                true,
-                1,
-                true
-            );
+        for(let i=0;i<redList.length;i++)
+        {
+            if (drug.get(redList[i]).length > 0)
+                return addRow(
+                    drugName,
+                    redList[i],
+                    drug.get(redList[i]),
+                    true,
+                    1,
+                    true
+                );
+        }
         var rows = "";
         var firstInstruction = true;
         var countInstructions = 0;
@@ -73,6 +69,14 @@ $(document).ready(function () {
                 firstInstruction = false;
         }
         return rows;
+    }
+
+    function initMap() {
+        var tempMap = new Map();
+        redList.forEach(ele => {
+            tempMap.set(ele, []);
+        });
+        return tempMap;
     }
 
     $("#delirium-caution-checklist-submit").click(function () {
@@ -97,23 +101,11 @@ $(document).ready(function () {
         var disorder = document.getElementById('delirium-caution-check15').checked;
 
         // Drugs
-        var haloperidol = new Map();
-        var olanzapine = new Map();
-        var quetiapine = new Map();
-        var risperidone = new Map();
-        var dexmedetomidine = new Map();
-
-        haloperidol.set("Contraindicated", []);
-        olanzapine.set("Contraindicated", []);
-        quetiapine.set("Contraindicated", []);
-        risperidone.set("Contraindicated", []);
-        dexmedetomidine.set("Contraindicated", []);
-
-        haloperidol.set("Avoid use", []);
-        olanzapine.set("Avoid use", []);
-        quetiapine.set("Avoid use", []);
-        risperidone.set("Avoid use", []);
-        dexmedetomidine.set("Avoid use", []);
+        var haloperidol = initMap()
+        var olanzapine = initMap()
+        var quetiapine = initMap()
+        var risperidone = initMap()
+        var dexmedetomidine = initMap()
 
         var reason, instr;
         if (elderly && dementia) {
