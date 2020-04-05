@@ -3,7 +3,7 @@ $(document).ready(function () {
     var redList = ["Contraindicated", "Avoid use"];
 
     function noChecks() {
-        for (let i = 1; i <= 15; i++)
+        for (let i = 1; i <= 23; i++)
             if (document.getElementById('delirium-caution-check' + i.toString()).checked)
                 return false;
         return true;
@@ -13,7 +13,6 @@ $(document).ready(function () {
         if (reasons.length === 0)
             return "";
         var row = "<tr>";
-        console.log(firstInstruction)
         if (firstInstruction)
             row += '<th scope="row" rowspan="'
                 + countInstructions
@@ -36,8 +35,7 @@ $(document).ready(function () {
     }
 
     function addRows(drugName, drug) {
-        for(let i=0;i<redList.length;i++)
-        {
+        for (let i = 0; i < redList.length; i++) {
             if (drug.get(redList[i]).length > 0)
                 return addRow(
                     drugName,
@@ -85,20 +83,28 @@ $(document).ready(function () {
             return;
         }
         var elderly = document.getElementById('delirium-caution-check1').checked;
-        var dementia = document.getElementById('delirium-caution-check2').checked;
-        var parkinson = document.getElementById('delirium-caution-check3').checked;
-        var fractures = document.getElementById('delirium-caution-check4').checked;
-        var impairment = document.getElementById('delirium-caution-check5').checked;
-        var heartBlock = document.getElementById('delirium-caution-check6').checked;
-        var heartFailure = document.getElementById('delirium-caution-check7').checked;
-        var cardiac = document.getElementById('delirium-caution-check8').checked;
-        var congenital = document.getElementById('delirium-caution-check9').checked;
-        var hepatic = document.getElementById('delirium-caution-check10').checked;
-        var renal = document.getElementById('delirium-caution-check11').checked;
-        var diabetes = document.getElementById('delirium-caution-check12').checked;
-        var aspiration = document.getElementById('delirium-caution-check13').checked;
-        var preexisting = document.getElementById('delirium-caution-check14').checked;
-        var disorder = document.getElementById('delirium-caution-check15').checked;
+        var parkinson = document.getElementById('delirium-caution-check2').checked;
+        var fractures = document.getElementById('delirium-caution-check3').checked;
+        var impairment = document.getElementById('delirium-caution-check4').checked;
+        var heartBlock = document.getElementById('delirium-caution-check5').checked;
+        var heartFailure = document.getElementById('delirium-caution-check6').checked;
+        var cardiac = document.getElementById('delirium-caution-check7').checked;
+        var congenital = document.getElementById('delirium-caution-check8').checked;
+        var hepatic = document.getElementById('delirium-caution-check9').checked;
+        var renal = document.getElementById('delirium-caution-check10').checked;
+        var diabetes = document.getElementById('delirium-caution-check11').checked;
+        var aspiration = document.getElementById('delirium-caution-check12').checked;
+        var preexisting = document.getElementById('delirium-caution-check13').checked;
+        var disorder = document.getElementById('delirium-caution-check14').checked;
+        var comatose = document.getElementById('delirium-caution-check15').checked;
+        var toxic = document.getElementById('delirium-caution-check16').checked;
+        var ileus = document.getElementById('delirium-caution-check17').checked;
+        var hyponatremia = document.getElementById('delirium-caution-check18').checked;
+        var agranulocytosis = document.getElementById('delirium-caution-check19').checked;
+        var respiratory = document.getElementById('delirium-caution-check20').checked;
+        var hypotension = document.getElementById('delirium-caution-check21').checked;
+        var cerebrovascular = document.getElementById('delirium-caution-check22').checked;
+        var phenylketonuria = document.getElementById('delirium-caution-check23').checked;
 
         // Drugs
         var haloperidol = initMap()
@@ -107,8 +113,14 @@ $(document).ready(function () {
         var risperidone = initMap()
         var dexmedetomidine = initMap()
 
+        haloperidol.set("Use with caution ,close monitoring", []);
+        olanzapine.set("Use with caution ,close monitoring", []);
+        quetiapine.set("Use with caution ,close monitoring", []);
+        risperidone.set("Use with caution ,close monitoring", []);
+        dexmedetomidine.set("Use with caution ,close monitoring", []);
+
         var reason, instr;
-        if (elderly && dementia) {
+        if (elderly) {
             reason = "Elderly patient with dementia";
             haloperidol.get("Contraindicated").push(reason);
             olanzapine.get("Contraindicated").push(reason);
@@ -154,6 +166,8 @@ $(document).ready(function () {
         if (congenital) {
             reason = "Congenital long QT syndrome";
             quetiapine.get("Contraindicated").push(reason);
+            risperidone.get("Contraindicated").push(reason);
+            haloperidol.get("Use with caution ,close monitoring").push(reason);
         }
 
         if (hepatic) {
@@ -175,6 +189,7 @@ $(document).ready(function () {
                 + "since increase in the free fraction of risperidone reported with"
                 + "severe impairment; dosage adjustment recommended";
             risperidone.set(instr, [reason]);
+            haloperidol.set("No dose adjustment", [reason]);
         }
 
         if (renal) {
@@ -188,6 +203,7 @@ $(document).ready(function () {
                 + "reported with severe impairment(CrCl less than 30"
                 + "mL / min / 1.73 m(2)) >>>>> dosage adjustment recommended"
             risperidone.set(instr, [reason]);
+            haloperidol.set("No dose adjustment", [reason]);
         }
 
         if (diabetes) {
@@ -204,7 +220,7 @@ $(document).ready(function () {
             instr = "Agranulocytosis, leukopenia, and"
                 + " neutropenia have been reported, especially with"
                 + " preexisting low WBC and history of drug - induced"
-                + " leukopenia or neutropenia >>>>>>> monitoring"
+                + " leukopenia or neutropenia  , absolut neutrophil count less than 1000/mm3) >>>>>>> monitoring"
                 + " recommended and discontinue if significant WBC decline";
             risperidone.set(instr, [reason]);
         }
@@ -214,7 +230,38 @@ $(document).ready(function () {
             instr = "Use caution in patients with history of"
                 + " seizure disorder or conditions that lower seizure threshold";
             risperidone.set(instr, [reason]);
+            haloperidol.set("Use with caution ,close monitoring ", [reason]);
         }
+
+        if (comatose)
+            haloperidol.get("Contraindicated").push("Comatose patients");
+
+        if (toxic)
+            haloperidol.get("Contraindicated").push("Severe toxic CNS depends");
+
+        if (ileus)
+            haloperidol.get("Use with caution ,close monitoring").push("Paralytic ileus patient");
+
+        if (hyponatremia)
+            haloperidol.get("Use with caution ,close monitoring").push("Patient with hyponatremia");
+
+        if (agranulocytosis)
+            haloperidol.get("Use with caution ,close monitoring").push("Patient with agranulocytosis");
+
+        if (respiratory)
+            dexmedetomidine.set("Use with caution", ["Patient with respiratory depression"]);
+
+        if (hypotension)
+            risperidone.get("Use with caution ,close monitoring").push("Patient with hypotension");
+
+        if (cerebrovascular)
+            risperidone.get("Use with caution ,close monitoring").push("Patient with cerebrovascular diseases eg: stroke, transient ischemic attack");
+
+        if (aspiration)
+            risperidone.get("Use with caution ,close monitoring").push("Patient at risk for aspiration pneumonia");
+
+        if (phenylketonuria)
+            risperidone.get("Use with caution ,close monitoring").push("Patient with phenylketonuria");
 
         var table = '<table class="table table-bordered">'
             + '<thead class="thead-dark">'

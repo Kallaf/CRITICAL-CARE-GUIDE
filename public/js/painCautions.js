@@ -32,7 +32,6 @@ $(document).ready(function () {
         if (reasons.length === 0)
             return "";
         var row = "<tr>";
-        console.log(firstInstruction)
         if (firstInstruction)
             row += '<th scope="row" rowspan="'
                 + countInstructions
@@ -134,7 +133,7 @@ $(document).ready(function () {
         var ketamine = initMap()
 
 
-        var reason, instr;
+        var reason;
         if (renalDisease) {
             if (document.getElementById('pain-renal1').checked) {
                 reason = "As GFR> 50ml/min";
