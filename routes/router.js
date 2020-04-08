@@ -46,6 +46,11 @@ router.get('/paralyticsRecommendations.html',function(req,res,next){
   res.render('paralyticsRecommendations',{title: 'Paralytics recommendations'});
 });
 
+
+router.get('/paralyticsCaution.html',function(req,res,next){
+  res.render('paralyticsCaution',{title: 'Paralytics caution'});
+});
+
 router.get('/painScoring.html',function(req,res,next){
   res.render('painScoring',{title: 'Pain scoring'});
 });
