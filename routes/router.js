@@ -38,8 +38,12 @@ router.get('/criteriaParalytics.html', function(req, res, next) {
   res.render('criteriaParalytics', { title: 'Criteria for the use of paralytics in ICU patients' });
 });
 
-router.get('/paralytics.html',function(req,res,next){
-  res.render('paralytics',{title: 'Paralytics'});
+router.get('/paralyticsDrugs.html',function(req,res,next){
+  res.render('paralyticsDrugs',{title: 'Paralytics drugs'});
+});
+
+router.get('/paralyticsRecommendations.html',function(req,res,next){
+  res.render('paralyticsRecommendations',{title: 'Paralytics recommendations'});
 });
 
 router.get('/painScoring.html',function(req,res,next){
