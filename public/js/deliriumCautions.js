@@ -3,7 +3,7 @@ $(document).ready(function () {
     var redList = ["Contraindicated", "Avoid use"];
 
     function noChecks() {
-        for (let i = 1; i <= 23; i++)
+        for (let i = 1; i <= 19; i++)
             if (document.getElementById('delirium-caution-check' + i.toString()).checked)
                 return false;
         return true;
@@ -96,15 +96,11 @@ $(document).ready(function () {
         var aspiration = document.getElementById('delirium-caution-check12').checked;
         var preexisting = document.getElementById('delirium-caution-check13').checked;
         var disorder = document.getElementById('delirium-caution-check14').checked;
-        var comatose = document.getElementById('delirium-caution-check15').checked;
-        var toxic = document.getElementById('delirium-caution-check16').checked;
-        var ileus = document.getElementById('delirium-caution-check17').checked;
-        var hyponatremia = document.getElementById('delirium-caution-check18').checked;
-        var agranulocytosis = document.getElementById('delirium-caution-check19').checked;
-        var respiratory = document.getElementById('delirium-caution-check20').checked;
-        var hypotension = document.getElementById('delirium-caution-check21').checked;
-        var cerebrovascular = document.getElementById('delirium-caution-check22').checked;
-        var phenylketonuria = document.getElementById('delirium-caution-check23').checked;
+        var electrolyte = document.getElementById('delirium-caution-check15').checked;
+        var ileus = document.getElementById('delirium-caution-check16').checked;
+        var hypotension = document.getElementById('delirium-caution-check17').checked;
+        var cerebrovascular = document.getElementById('delirium-caution-check18').checked;
+        var phenylketonuria = document.getElementById('delirium-caution-check19').checked;
 
         // Drugs
         var haloperidol = initMap()
@@ -148,7 +144,7 @@ $(document).ready(function () {
         }
 
         if (heartBlock)
-            dexmedetomidine.set("Use with caution", ["Advanced heart block"]);
+            dexmedetomidine.set("Use with caution in patients with heart block, bradycardia, severe ventricular dysfunction, hypovolemia, or chronic hypertension.", ["Cardiovascular disease"]);
 
         if (heartFailure) {
             reason = "Congestive heart failure";
@@ -158,14 +154,21 @@ $(document).ready(function () {
         if (cardiac) {
             reason = "Cardiac arrhythmia";
             quetiapine.get("Contraindicated").push(reason);
-            instr = "Monitor blood pressure and heart"
-                + " rate, Bradycardia and hypotension are reported"
-            dexmedetomidine.set(instr, [reason]);
+
+            instr = "Use caution in patients with a history of conduction abnormalities."
+                + "May alter cardiac conduction and prolong the QT interval; life - threatening arrhythmias have occurred"
+                + "with therapeutic doses of antipsychotics"
+            olanzapine.set(instr, [reason]);
+            instr = "Use caution in patients with a history of conduction abnormalities.Relative to other"
+                + " neuroleptics, risperidone has a low risk of arrhythmias";
+            risperidone.set(instr, [reason]);
         }
 
         if (congenital) {
             reason = "Congenital long QT syndrome";
-            quetiapine.get("Contraindicated").push(reason);
+            instr = "Use with caution in patients at increased risk of QT prolongation (eg, cardiovascular disease,"
+                + "heart failure, cardiac hypertrophy, elderly, family history of QT prolongation"
+            quetiapine.set(instr, [reason]);
             risperidone.get("Contraindicated").push(reason);
             haloperidol.get("Use with caution ,close monitoring").push(reason);
         }
@@ -185,9 +188,11 @@ $(document).ready(function () {
                 + "<br> For extended release tablets: intiate with 50mg/day increase in"
                 + " increments of 50 mg/day depending on patient response and tolerability";
             quetiapine.set(instr, [reason]);
-            instr = "Use caution in patients with hepatic impairment"
-                + "since increase in the free fraction of risperidone reported with"
-                + "severe impairment; dosage adjustment recommended";
+            instr = '<b>Oral</b>: Mild or moderate impairment(Child - Pugh class A or B): There are no dosage adjustments provided in'
+                + " the manufacturer's labeling; reduce dosage."
+                + 'Severe impairment(Child - Pugh class C): Initial: 0.5 mg twice daily; titration should progress slowly in'
+                + 'increments of no more than 0.5 mg twice daily; increases to dosages > 1.5 mg twice daily should occur at'
+                + 'intervals of ≥1 week.';
             risperidone.set(instr, [reason]);
             haloperidol.set("No dose adjustment", [reason]);
         }
@@ -198,10 +203,10 @@ $(document).ready(function () {
             dexmedetomidine.set(instr, [reason]);
             olanzapine.set(instr + "(not dialyzable)", [reason]);
             quetiapine.set(instr, [reason]);
-            instr = "Use with caution in patients with renal"
-                + "impairment since increased plasma concentrations"
-                + "reported with severe impairment(CrCl less than 30"
-                + "mL / min / 1.73 m(2)) >>>>> dosage adjustment recommended"
+            instr = "<b>Oral</b>:Mild or moderate impairment (CrCl ≥30 mL/minute): There are no dosage adjustments provided in the"
+                + " manufacturer's labeling; reduce dosage."
+                + " Severe impairment (CrCl <30 mL/minute): Initial: 0.5 mg twice daily; titrate slowly in increments of no"
+                + " more than 0.5 mg twice daily; increases to dosages >1.5 mg twice daily should occur at intervals of ≥1 week.";
             risperidone.set(instr, [reason]);
             haloperidol.set("No dose adjustment", [reason]);
         }
@@ -223,6 +228,13 @@ $(document).ready(function () {
                 + " leukopenia or neutropenia  , absolut neutrophil count less than 1000/mm3) >>>>>>> monitoring"
                 + " recommended and discontinue if significant WBC decline";
             risperidone.set(instr, [reason]);
+            instr = "Should prompt periodic blood count assessment.Discontinue therapy at first signs of blood"
+            + " dyscrasias or if absolute neutrophil count < 1, 000 / mm3";
+            haloperidol.set(instr, [reason]);
+            instr =  "Should prompt periodic blood count assessment; discontinue therapy with WBC decline"
+            + " without other causative factors.Carefully monitor patients with neutropenia for fever and"
+            + " signs / symptoms of infection and discontinue therapy if absolute neutrophil count < 1, 000 / mm3."
+            quetiapine.set(instr, [reason]);
         }
 
         if (disorder) {
@@ -233,23 +245,16 @@ $(document).ready(function () {
             haloperidol.set("Use with caution ,close monitoring ", [reason]);
         }
 
-        if (comatose)
-            haloperidol.get("Contraindicated").push("Comatose patients");
-
-        if (toxic)
-            haloperidol.get("Contraindicated").push("Severe toxic CNS depends");
+        if (electrolyte) {
+            reason = "Electrolyte abnormalities";
+            instr = "Use caution in patients with history of"
+                + " seizure disorder or conditions that lower seizure threshold";
+            risperidone.set(instr, [reason]);
+            haloperidol.set("Use with caution ,close monitoring ", [reason]);
+        }
 
         if (ileus)
             haloperidol.get("Use with caution ,close monitoring").push("Paralytic ileus patient");
-
-        if (hyponatremia)
-            haloperidol.get("Use with caution ,close monitoring").push("Patient with hyponatremia");
-
-        if (agranulocytosis)
-            haloperidol.get("Use with caution ,close monitoring").push("Patient with agranulocytosis");
-
-        if (respiratory)
-            dexmedetomidine.set("Use with caution", ["Patient with respiratory depression"]);
 
         if (hypotension)
             risperidone.get("Use with caution ,close monitoring").push("Patient with hypotension");

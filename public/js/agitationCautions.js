@@ -5,9 +5,6 @@ $(document).ready(function () {
         + "<br>Propofol Related Infusion Syndrome (PRIS): This syndrome is a rare but"
         + " life-threatening complication of propofol, generally occurring at doses exceeding 50"
         + " mcg/kg/minute for 48 hours or more",
-        '<b style="color:red">Avoid</b> because of the symptoms of PRIS may be difficult to distinguish from the underlying disease state abnormalities.'
-        + "<br>Propofol Related Infusion Syndrome (PRIS): This syndrome is a rare but life-threatening"
-        + " complication of propofol, generally occurring at doses exceeding 50 mcg/kg/minute for 48 hours or more",
         '<b style="color:red">Avoid</b> due to its adverse effect of Tachycardia, bradycardia,'
         +'hypertension, hypotension, dry mouth',
         'If used (+ PROPYLENE GLYCOL ) = Toxicity'
@@ -107,7 +104,7 @@ $(document).ready(function () {
         // Drugs
         var Propofol = initMap()
         var Lorazepam = initMap()
-        var Dexmedetomidin = initMap()
+        var Dexmedetomidine = initMap()
         var Midazolam = initMap()
 
         var reason, instr;
@@ -123,29 +120,27 @@ $(document).ready(function () {
             Propofol.get(redList[0]).push(reason);
         }
 
-        if (neurological) {
-            reason = "Neurological injury";
-            Propofol.get(redList[1]).push(reason);
-        }
 
-        if (sepsis) {
-            reason = "Sepsis";
-            Propofol.get(redList[1]).push(reason);
-        }
-
-        if (triglyceridrmia) {
-            reason = "History of hyper triglyceridemia";
-            Propofol.get(redList[1]).push(reason);
-        }
-
-        if (decompensated) {
-            reason = "Acute decompensated Heart failure";
-            Dexmedetomidin.get(redList[2]).push(reason);
+        if(sepsis || triglyceridrmia || decompensated || neurological)
+        {
+            var reasons = [];
+            if(sepsis)
+                reasons.push("Sepsis");
+            if (triglyceridrmia)
+                reasons.push("History of hyper triglyceridemia");
+            if(decompensated)
+                reasons.push("Acute decompensated Heart failure");
+            if(neurological)
+                reasons.push("Neurological injury");
+            instr = 'Caution the symptoms of PRIS may be difficult to distinguish from the underlying disease state abnormalities.'
+            + "<br>Propofol Related Infusion Syndrome (PRIS): This syndrome is a rare but life-threatening"
+            + " complication of propofol, generally occurring at doses exceeding 50 mcg/kg/minute for 48 hours or more";
+            Propofol.set(instr,reasons);
         }
 
         if (heartBlock) {
             reason = "Advanced Heart failure";
-            Dexmedetomidin.get(redList[2]).push(reason);
+            Dexmedetomidine.get(redList[1]).push(reason);
         }
 
         if (elderly) {
@@ -156,17 +151,17 @@ $(document).ready(function () {
 
         if (osmolar) {
             reason = "Osmolar gap or Metabolic acidosis";
-            Lorazepam.get(redList[3]).push(reason);
+            Lorazepam.get(redList[2]).push(reason);
         }
 
         if (renalFailure) {
             reason = "Unexplained new onset of renal disease";
-            Lorazepam.get(redList[3]).push(reason);
+            Lorazepam.get(redList[2]).push(reason);
         }
 
         if (respiratoryFailure) {
             reason = "Respiratory Failure";
-            Lorazepam.get(redList[3]).push(reason);
+            Lorazepam.get(redList[2]).push(reason);
         }
 
         if (opioid) {
@@ -196,7 +191,7 @@ $(document).ready(function () {
             + '<tbody>'
             + addRows("Propofol", Propofol)
             + addRows("Lorazepam", Lorazepam)
-            + addRows("Dexmedetomidin", Dexmedetomidin)
+            + addRows("Dexmedetomidine", Dexmedetomidine)
             + addRows("Midazolam", Midazolam)
             + '</tbody></table>';
 
