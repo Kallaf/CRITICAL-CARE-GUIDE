@@ -1,5 +1,4 @@
 # Critical care guide
-Your critical care guide for pain, agitation and delirium assessment and management
 
 ## How to Run
 1. Make sure you have [Node.js](https://nodejs.org/en/) installed properly.
